@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -8,6 +9,7 @@
 /*font-family: 'Outfit', sans-serif;
 font-family: 'Roboto', sans-serif;*/
 
+/*-----------------POCETAK HOME STRANICE----------------------*/
 header{
     height: 60px;
     background-color: #013A63;
@@ -18,25 +20,9 @@ header{
     z-index: 1;
 }
 
-#logodiv{
-    display: flex;
-    height: inherit;
-    align-items: center;
-}
+#logolink img{
+    height: 50px;
 
-#logodiv img{
-    height: inherit;
-}
-
-#logo{
-
-    color:#FF9100;
-    font-family: 'Outfit', sans-serif;
-    margin-left: 5px;
-}
-
-#logolink{
-    text-decoration: none;
 }
 
 .nav_list{
@@ -54,7 +40,21 @@ header{
 
 }
 
-.nav_list li a{
+.nav_list li a:link, .nav_list li a:visited{
+
+    height: 60px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:#FF9100;
+    font-family: 'Outfit', sans-serif;
+    padding: 0px 10px;
+    font-weight: 550;
+    font-size: 25px;
+}
+
+.nav_list li a:hover, .nav_list li a:active{
 
     height: 60px;
     margin-left: 5px;
@@ -69,10 +69,26 @@ header{
     border-bottom: 4px solid #FF9100;
 }
 
-#posebno{
+.aktivan{
+    border-bottom: 4px solid #FF9100;
+}
+
+
+#posebno:visited, #posebno:link{
 
     border: 4px solid #FF9100;
     padding: 17px 15px;
+    margin-left: 25px;
+    border-radius: 10px;
+
+
+}
+#posebno:hover, #posebno:active{
+
+    border: 4px solid #FF9100;
+    padding: 17px 15px;
+    color: #013A63;
+    background-color: #FF9100;
     margin-left: 25px;
     border-radius: 10px;
 
@@ -121,6 +137,15 @@ header .center{
     background-size: contain;
     background-size: 80%;
     background-position: center;
+    position: relative;
+    animation-name: pozadinska;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+
+}
+@keyframes pozadinska{
+    from {right: -600px;}
+    to {right: 0px;}
 
 }
 
@@ -135,21 +160,32 @@ header .center{
     margin: 50px 0px;
     border-left: 5px solid #FF9100;
     padding-left: 15px;
+    position: relative;
+    animation-name: heder;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
 }
+
+@keyframes heder{
+    from {left: -600px;}
+    to {left: 0px;}
+
+}
+
 
 .pozadina .home1 .tekst #odgovor{
 
     margin: 100px 0px;
     line-height: 150%;
     text-align: justify;
+    position: relative;
+    animation-name: heder;
+    animation-duration: 1s;
+    animation-timing-function: ease;
 
 }
 
-.pozadina .home1 .tekst #odgovor{
 
-    margin: 100px 0px;
-
-}
 
 .tekst #quote{
 
@@ -158,6 +194,9 @@ header .center{
     border: 1px solid #FF9100;
     padding: 25px 10px;
     position: relative;
+    animation-name: heder;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
     
 }
 
@@ -342,8 +381,13 @@ font-style: italic;
     border-radius: 0px 0px 10px 10px;
     background: linear-gradient(180deg, #013A63 5%, #060c50 100%);
     box-shadow: 5px 5px  10px rgb(20, 0, 58);
-
+    transition: transform 0.3s;
 }
+
+.kursevi:hover {
+    transform: translate(0px, -15px);
+  }
+
 
 .kursevi img{
     width: 100%;
@@ -393,7 +437,7 @@ font-style: italic;
     height: 80px;
 }
 
-.izaberi h4{
+/*.izaberi a{
 
     text-decoration: none;
     color:#FF9100;
@@ -402,18 +446,48 @@ font-style: italic;
     font-weight: 550;
     font-size: 18px;
     border: 4px solid #FF9100;
-    padding: 5px 5px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}*/
+
+.izaberi a:link, .izaberi a:visited{
+
+    text-decoration: none;
+    color:#FF9100;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    font-weight: 550;
+    font-size: 18px;
+    border: 4px solid #FF9100;
+    padding: 5px 20px;
     border-radius: 10px;
 }
 
+.izaberi a:hover, .izaberi a:active{
+
+    text-decoration: none;
+    color:#013A63;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #FF9100;
+    border: 4px solid #FF9100;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+
+
 .izaberi{
-    margin: 10px auto;
+    margin: 0px auto;
     width: 30%;
+    margin-top: 15px;
 }
 
 .home4{
 
-    height: 500px;
+    height: 410px;
     background-color: #013A63;
     position: relative;
 
@@ -427,6 +501,7 @@ font-style: italic;
     width: 50%;
     height: inherit;
     padding-top: 50px;
+
 }
 
 .lesson h2{
@@ -456,21 +531,51 @@ font-style: italic;
 #lessondugme{
     width: 35%;
 
+
 }
 
-#lessondugme h3{
+#lessondugme a:visited, #lessondugme a:link{
     color:#FF9100;
     font-size: 25px;
+    height: 60px;
+    font-weight: 550;
     font-family: 'Outfit', sans-serif;
     text-align: center;
     border: 4px solid #FF9100;
-    padding: 5px 5px;
+    padding: 12px 15px;
     border-radius: 10px;
+    text-decoration: none;
     
 }
 
+#lessondugme a:hover, #lessondugme a:active{
+    color:#013A63;
+    font-size: 25px;
+    height: 60px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    background-color: #FF9100;
+    border: 4px solid #FF9100;
+    padding: 12px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    
+}
+
+
+
+/*
+    border: 4px solid #FF9100;
+    padding: 17px 15px;
+    margin-left: 25px;
+    border-radius: 10px;
+    
+    */
+
 .freelesson{
     width: 50%;
+
 }
 
 #dugmepozicija{
@@ -479,5 +584,531 @@ font-style: italic;
 }
 .j{
 
-    background-color: black;
+
+/*
+ background-image: url(../img/lesson1.svg);*/
+
+ position: relative;
+ 
 }
+
+#lessonslika{
+
+    top: 60px;
+    position: absolute;
+    width: 100%;
+    background-image: url(../img/lesson1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+
+}
+
+footer{
+
+    width: 100%;
+    height: 150px;
+    background-color: #013A63;
+    /*background-color: #060c50;*/
+}
+
+footer .center{
+
+
+    height: 148px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerdiv{
+
+    width: 30%;
+    height: inherit;
+}
+
+.naslov h2{
+
+    text-align: center;
+    color:#FF9100;
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.naslov{
+    padding-top: 10px;
+}
+
+.footersadrzaj{
+
+    display: flex;
+    padding-top: 14px;
+    flex-wrap: wrap;
+}
+
+#linkovi{
+
+    color:#FF9100;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    justify-content: space-around;
+
+}
+
+#linkovi a{
+    width: 21%;
+    text-decoration: none;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#imejl{
+    color:#FF9100;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+#imejl i{
+    padding: 3px;
+}
+
+#mreze{
+
+    color:#FF9100;
+    font-size: 23px;
+    justify-content: space-around;
+}
+
+footer .center{
+    border-top: 1px solid #FF9100;
+}
+
+.footersadrzaj a:visited, .footersadrzaj a:link{
+    text-decoration: none;
+    color: #FF9100;
+    transition: transform 0.3s;
+}
+
+.footersadrzaj a:hover, .footersadrzaj a:active{
+    text-decoration: none;
+    color: #FF9100;
+    transform: translate(0px, -5px);
+}
+
+/*-----------------KRAJ HOME STRANICE----------------------*/
+
+
+
+
+/*--------------STILIZOVANJE BEGIN.HTML STRANICE-----------*/
+
+
+#form1{
+
+    height: 700px;
+    width: 100%;
+    background-color: #013A63;
+}
+
+#form1 .center{
+    height: inherit;
+}
+
+#formflex{
+    display: flex;
+    justify-content: space-around;
+    height: 450px;
+}
+
+
+#nalog{
+    height: inherit;
+    width: 40%;
+    background: linear-gradient(180deg, #013A63 5%, #060c50 100%);
+    box-shadow: 5px 5px  10px rgb(20, 0, 58);
+    padding-top: 50px;
+    border-radius: 0px 0px 15px 15px;
+    border-top: 5px solid #FF9100;
+    position: relative;
+    animation-name: heder1;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
+}
+
+#form1 h1{
+
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px;
+    position: relative;
+    color:#FF9100;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    animation-name: heder1;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes heder1 {
+    from {left: -800px;}
+    to {left: 0px;}
+}
+
+#slikalaptopa{
+    height: inherit;
+    width: 40%;
+    background-image: url(../img/podaci.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: relative;
+    padding-top: 50px;
+    animation-name: slikalaptop;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+}
+
+@keyframes slikalaptop {
+    from {right: -800px;}
+    to {right: 0px;}
+}
+
+
+#slikalaptopa h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #FF9100;
+    font-size: 25px;
+}
+
+#nalog h2{
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #FF9100;
+    font-size: 25px;
+}
+
+#account{
+
+    width: 100%;
+    height: 300px;
+    padding: 0px 15px;
+    margin-top: 30px;
+
+}
+
+#tableaccount{
+    width: 100%;
+    height: inherit;
+    color: #FF9100;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+}
+
+#tableaccount tr{
+    margin-bottom: 15px;
+}
+
+#tableaccount input{
+
+    padding: 2px 3px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #060c50;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    
+}
+
+#tableaccount label{
+
+    margin-left: 5px;
+}
+
+#tableaccount input:focus{
+    outline: 0;
+    border: 2px solid #FF9100;
+}
+
+#pasw, #email, #cname, #cnumber{
+
+    width: 60%;
+}
+
+#rememberme{
+    height: 20px;
+    width: 20px;
+    margin-top: 15px;
+    
+}
+
+.dugme{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.submit{
+    height: 35px;
+    width: 140px;
+    background-color: #FF9100;
+    color: #013A63;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.submit:hover{
+    height: 35px;
+    width: 140px;
+    background-color: #060c50;
+    color: #FF9100;
+    outline: 2px solid #FF9100;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+.reset:hover{
+    height: 35px;
+    width: 140px;
+    background-color: #FF9100;
+    color: #013A63;
+    outline: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.reset{
+    height: 35px;
+    width: 140px;
+    background-color: #060c50;
+    color: #FF9100;
+    outline: 2px solid #FF9100;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#remember{
+    position: relative;
+}
+
+
+#form2{
+
+    width: 100%;
+    height: 650px;
+    background-color: #013A63;
+}
+
+#form2 .center{
+
+    height: inherit;
+}
+
+#formflex2{
+
+    display: flex;
+    justify-content: space-around;
+    height: 510px;
+}
+
+#kurs{
+    width: 40%;
+    height: inherit;
+    background: linear-gradient(180deg, #013A63 5%, #060c50 100%);
+    box-shadow: 5px 5px  10px rgb(20, 0, 58);
+    padding-top: 50px;
+    border-radius: 0px 0px 15px 15px;
+    border-top: 5px solid #FF9100;
+    position: relative;
+    animation-name: heder1;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+}
+
+#placanje{
+    height: inherit;
+    width: 40%;
+    background-image: url(../img/kupovina.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: relative;
+    animation-name: slikalaptop;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    padding-top: 50px;
+}
+
+#placanje h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #FF9100;
+    font-size: 25px;
+}
+
+#kurs h2{
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #FF9100;
+    font-size: 25px;
+}
+
+
+#tablepayment{
+    width: 100%;
+    height: inherit;
+    color: #FF9100;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+
+}
+
+
+#tablepayment tr{
+    margin-bottom: 15px;
+}
+
+#tablepayment input{
+
+    padding: 2px 3px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #060c50;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 2px;
+
+}
+
+#tablepayment label{
+
+    margin-left: 5px;
+}
+
+#tablepayment input:focus{
+    outline: 0;
+    border: 2px solid #FF9100;
+}
+
+#payment{
+
+    margin-top: 30px;
+    padding: 0px 15px;
+}
+
+select{
+    width: 60%;
+    outline: none;
+    text-align: center;
+    padding: 3px;
+    border: 2px solid #FF9100;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/*--------------KRAJ STILIZOVANJA BEGIN.HTML STRANICE-------*/
+
+
+/*--------------POCETAK STILIZOVANJA STRANICE AUTHOR.HTML---------*/
+
+
+    #author1{
+        width: 100%;
+        height: 900px;
+        background-color: #013A63;
+    }
+
+
+    #author1 .center{
+        height: inherit;
+        display: flex;
+    }
+
+
+    #auttext{
+        width: 50%;
+        height: 500px;
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #autslika{
+        width: 50%;
+        height: 500px;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #okvir{
+        display: flex;
+
+        border: 6px solid #FF9100;
+        padding: 20px;
+        border-radius: 0px 35px 0px 35px;
+    }
+
+    #okvir img{
+        width: 300px;
+    }
+
+    #oautoru{
+        width: 350px;
+        padding: 15px;
+        border-left: 4px solid #FF9100;
+    }
+
+    #auttext h1{
+        color:#FF9100;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+
+    }
+
+    #oautoru h3{
+        color:#FF9100;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        padding-bottom: 3px;
+    }
+
+    #oautoru p{
+        color:#FF9100;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        padding-bottom: 15px;
+        padding-left: 10px
+    }
+
+
+
+/*--------------KRAJ STILIZOVANJA STRANICE AUTHOR.HTML---------*/
