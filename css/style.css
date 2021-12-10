@@ -1069,6 +1069,10 @@ select{
         border: 6px solid #FF9100;
         padding: 20px;
         border-radius: 0px 35px 0px 35px;
+        position: relative;
+        animation-name: slikalaptop;
+        animation-duration: 1.4s;
+        animation-timing-function: ease;
     }
 
     #okvir img{
@@ -1079,6 +1083,10 @@ select{
         width: 350px;
         padding: 15px;
         border-left: 4px solid #FF9100;
+        position: relative;
+        animation-name: heder1;
+        animation-duration: 1.2s;
+        animation-timing-function: ease;
     }
 
     #auttext h1{
@@ -1089,6 +1097,10 @@ select{
         text-align: center;
         margin-top: 10px;
         margin-bottom: 15px;
+        position: relative;
+        animation-name: heder1;
+        animation-duration: 1s;
+        animation-timing-function: ease;
 
     }
 
@@ -1112,3 +1124,42 @@ select{
 
 
 /*--------------KRAJ STILIZOVANJA STRANICE AUTHOR.HTML---------*/
+
+
+
+/*-------------POCETAK STILIZOVANJA ABOUTUS.HTML STRANICE--------*/
+
+
+
+#aboutus1{
+
+    height: 900px;
+    width: 100%;
+    background-color: #013A63;
+}
+
+
+.center{
+    height: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------KRAJ STILIZOVANJA ABOUTUS.HTML STRANICE--------*/
+
