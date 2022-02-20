@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/c2ed6ff968.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:wght@300&display=swap" rel="stylesheet" />  
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" sizes="16x16"/>
+    <meta name="author" content="Nikola Samardžić"/>
+    <meta name="keywords" content="Online school, Paymeny, course, new account, log in, sign in"/>
+    <meta name="description" content="Create account for our school and change your life for the better"/>
+    <title>Begin</title>
+</head>
+<body>
+    
+    <header>
+
+        <div class="center">
+
+        <a href="index.html" id="logolink">
+
+                <img src="img/logo.svg" alt="logo" />
+  
+
+        </a>
+
+        <ul class="nav_list">
+
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="author.html">Author</a></li>
+            <li><a href="begin.html"  id="posebno">Begin</a></li>
+
+        </ul>
+    </div>
+    </header>
+
+        <div id="form1">
+
+
+            <div class="center">
+                <h1>Start Your Jurney Today!</h1>
+             
+            <div id="formflex">
+            <div id="nalog">
+                <h2>Create an Account</h2>
+
+                <form name="account" id="account" action="account.php" method="post">
+
+                    <table id="tableaccount">
+                        <tbody>
+
+                        <tr>
+                            <td><label for="fname">First Name</label></td>
+                            <td><label for="lname">Last Name</label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" autofocus name="fname"  id="fname" required="required" />
+                            </td>
+                            <td>
+                                <input type="text" name="lname" id="lname" required="required" />
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="email">E-mail</label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><input type="email" name="email" id="email" required="required" /></td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><label for="pasw">Password</label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><input type="password" name="pasw" id="pasw" required="required" /></td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" id="remember"><input type="checkbox" id="rememberme" name="rememberme" value="remember" />
+                                <label for="rememberme" >Remember Me</label>
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td class="dugme"><input type="reset" class="reset" value="Reset" />
+                                </td>
+                            <td class="dugme"><input type="submit" class="submit" value="Submit" /></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+
+                </form>
+
+
+            </div>
+
+            <div id="slikalaptopa">
+
+                <h2>Don't Worry, Your Data Is Safe With Us!</h2>
+
+            </div>
+        </div>
+
+             </div>
+        </div>
+
+        <div id="form2">
+
+            <div class="center">
+
+                <div id="formflex2">
+
+                    <div id="kurs">
+                        <h2>Payment Details</h2>
+                        <form name="payment" id="payment" action="payment.php" method="post">
+
+                            <table id="tablepayment">
+                                <tbody>
+
+                                <tr>
+                                    <td colspan="2"><label for="coursesel">Choose a Course</label></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2"><select id="coursesel" name="coursesel">
+                                        <option value="0" selected>Choose</option>
+                                        <option value="web">Web Development</option>
+                                        <option value="mob">Mobile Development</option>
+                                        <option value="game">Game Development</option>
+                                        <option value="data">Database Development</option>
+                                        <option value="science">Data Science</option>
+                                      </select></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2"><label for="cname">Name on Card</label></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="text" required id="cname" name="cname" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2"><label for="cnumber">Card Number</label></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="number" required id="cnumber" name="cnumber" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="cvv">CVV Number</label></td>
+                                    <td><label for="expiry">Expiry Date</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" id="cvv" required  name="cvv" /></td>
+                                    <td><input type="text" id="expiry"required placeholder="MM/YY" name="expiry" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2" id="total_price">Total Price: 150&#36;</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="dugme"><input type="reset" class="reset" value="Reset" /></td>
+                                    <td class="dugme"><input type="submit" class="submit" value="Submit" /></td>
+                                </tr>
+                            </tbody>
+
+                            </table>
+
+
+
+
+
+
+                        </form>
+                    </div>
+
+                    <div id="placanje">
+                        <h2>Almost Done!</h2>
+ 
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+<footer>
+
+    <div class="center">
+
+        <div class="footerdiv">
+
+            <div class="naslov">
+                <h2>Explore</h2>
+            </div>
+
+            <div class="footersadrzaj" id="linkovi">
+
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="author.html">Author</a>
+                <a href="begin.html">Begin</a>
+                <a href="rss.xml" target="_blank">RSS</a>
+                <a href="sitemap.xml" target="_blank">Sitemap</a>
+
+            </div>
+
+        </div>
+        <div class="footerdiv">
+
+            <div class="naslov">
+                <h2>Contact Us</h2>
+            </div>
+
+            <div class="footersadrzaj" id="imejl">
+
+                <i class="far fa-envelope"></i>
+                <p>E-mail: S.School&#64;gmail&#46;com</p>
+
+            </div>
+
+        </div>
+        <div class="footerdiv">
+
+            <div class="naslov">
+                <h2>Follow Us</h2>
+            </div>
+
+            <div class="footersadrzaj" id="mreze">
+
+                <a href="rss.xml" target="_blank"><i class="fas fa-rss"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</footer>
+
+</body>
+</html>
