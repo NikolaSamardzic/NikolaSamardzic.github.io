@@ -1,0 +1,38 @@
+ $black: black;
+ $white: white;
+ $svetloplava: #99d9ea;
+
+ $secondaryfont: 'Montserrat';
+ $mainfont: 'Poppins';
+
+$font-size:(
+
+
+    'size-ultra-large':2.1rem,
+
+
+    'size-large':1.6rem,
+    'size-large1':1.7rem,
+    'size-large2':2rem,
+
+
+
+    'size-regular':1.5rem,
+    'size-regular1':1.2rem,
+
+    'size-small':0.5rem,
+
+);
+
+
+@function size($size-name){
+
+    @return map-get($font-size , $size-name)
+
+}
+
+
+
+
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;*/
