@@ -1,0 +1,464 @@
+@import './reset';
+@import './variables';
+@import './responsive';
+
+@mixin flexCenter{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexSpaceBetweenAlignCenter{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes pojavljivanje {
+    from{
+        top: 80px;
+        opacity: 0.2;
+
+    }
+    to{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes pojavljivanje2 {
+    from{
+        top: 100px;
+        opacity: 0;
+
+    }
+    to{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes heroslika {
+    from {
+        top: 0px;
+        bottom: -1px;
+        right: -1px;
+        left: -1px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+    to {
+        top: 0px;
+        bottom: -1px;
+        right: -1px;
+        left: -1px;
+
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0); }
+  }
+
+
+/*--------------Globaly styled things-----------------*/
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+/*--------------End of globaly styled things-----------*/
+
+
+/*----------Styling Header-----------*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height:60px;
+    background-color: $black;
+    color: $white;
+    padding-left: 3%;
+    padding-right: 3%;
+
+
+    @include flexSpaceBetweenAlignCenter;
+
+    a{
+        font-family: $mainfont;
+        font-size: size(size-large);
+        letter-spacing: 0.1rem;
+    }
+
+    #logo{
+        font-family: $secondaryfont;
+        letter-spacing: 0.3rem;
+        font-weight: 500;
+        
+        
+        background-image: linear-gradient(90deg,rgba(0,0,0,1) 50%,  rgba(255,255,255,1) 50%);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+        transition: 300ms;
+
+        &:hover{
+            background-position: 3.85rem;
+        }
+
+    }
+
+    #nesto{
+
+        position: relative;
+        z-index: 2;
+
+        ::before{
+            content: '';
+            position: absolute;
+            display: inline-block;
+            width: 50%;
+            top:-10%;
+            height: 120%;
+            background-color: $svetloplava;
+            transition: transform 300ms;
+            z-index: -1;
+                        
+        }
+
+        & :hover::before{
+            
+            transform: translateX(96%);
+            z-index: -1;
+            
+        }
+
+    }
+
+    ul{
+
+        list-style-type: none;
+        display: flex;
+        gap: 2em;
+
+        li{
+
+            position: relative;
+
+            a{
+                display: inline-block;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 0px;
+                    background-color: $svetloplava;
+                    left: 50%;
+                    bottom: -3px;
+                    transition: 300ms;
+
+                }
+
+                &:hover::before{
+                    background-color: $svetloplava;
+                    width: 100%;
+                    left:0;
+                }
+            }
+        }
+
+    }
+
+    .fa{
+        display: none;
+    }
+
+    @include tablet940{
+        nav{
+            display: none;
+           
+        }
+
+        .fa{
+            display: inline-block;
+            color: $svetloplava;
+            font-size: 2rem;
+        }
+    }
+}
+
+/*----------End of styling Header-----------*/
+
+
+main{
+    height: 1500px;
+    padding-left: 3%;
+    padding-right: 3%;
+    
+    background-color: black;
+
+}
+
+/*-------------Styling Hero section-------------*/
+
+#hero{
+
+    height: calc(100vh - 60px);
+    border-top: 3px solid $svetloplava;
+    position: relative;
+
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+
+    @include tablet940{
+        grid-template-columns: 1fr 1fr;
+
+        #aprvi{
+
+            background-image: url(../../img/creativity_pattern.png);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+
+        #adrugi{
+            display: none;
+        }
+    }
+
+    @include phone690{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr;
+
+        background-image: url(../../img/creativity_pattern.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+
+
+        #aprvi{
+            background-image: none;
+        }
+
+        #adrugi{
+            background-image: none;
+            display: block;
+            padding-top: 1em;
+            padding-right: 0.5em;
+        }
+    }
+
+    font-family: $mainfont;
+    color: $white;
+    letter-spacing: 0.1em;
+
+
+    article{
+
+        display: flex;
+        align-items: center;
+
+
+
+        #naslov1{
+            color: $svetloplava;
+            font-size: size(size-regular);
+            display: inline;
+            position: relative;
+            animation-name: pojavljivanje;
+            animation-duration: 600ms;
+
+            @include pc1190{
+                font-size: size(size-regular1);
+            }
+
+
+        }
+
+        #naslov2{
+            position: relative;
+            font-size: size(size-ultra-large);
+            animation-name: pojavljivanje;
+            animation-duration: 1000ms;
+
+            @include pc1190{
+                font-size: size(size-large1);
+            }
+        }
+
+    }
+
+    #heroslika{
+        background-image: url(../../img/creativity.jpg);
+        background-repeat: no-repeat;
+        background-position: calc(50% + 150px); 
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+
+        @include tablet940{
+
+            background-position: 5px;
+
+        }
+
+        @include phone690{
+           
+                background-position-y: -150px;
+                background-position-x: -30px;
+                background-attachment: fixed;
+            
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(21,42,69,0.3);
+
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: 3;
+
+            
+            animation-name: heroslika;
+            animation-duration: 1500ms;
+            
+            background-color: $black;
+
+        }
+
+
+    }
+
+    #adrugi{
+        padding-left: 2em;
+        font-size: size(size-regular);
+        position: relative;
+
+        @include pc1190{
+            font-size: size(size-regular1);
+        }
+
+
+        p{
+            position: relative;
+            z-index: 1;
+            
+        animation-name: pojavljivanje2;
+        animation-duration: 1200ms;
+        }
+
+        .plava{
+            color: $svetloplava;
+        }
+
+        .indent{
+            margin-left: -1em;
+        }
+
+        background-image: url(../../img/creativity_pattern.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include phone690{
+            background-image: none;
+        }
+
+    }
+
+    #aprvi{
+
+        position: relative;
+
+    }
+
+
+
+}
+
+/*-------End of styling hero section--------*/
+
+
+
+/*--------Styling secondary nav------------*/
+
+#manjinav{
+
+    display: none;
+
+    ul{
+
+        font-size: size(size-large1);
+        margin-top: 0.9em;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-family: $mainfont;
+
+
+        column-gap: 2em;
+
+        li{
+
+            position: relative;
+
+
+            a{
+                display: inline-block;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 0px;
+                    background-color: $svetloplava;
+                    left: 50%;
+                    bottom: -3px;
+                    transition: 300ms;
+
+                }
+
+                &:hover::before{
+                    background-color: $svetloplava;
+                    width: 100%;
+                    left:0;
+                }
+            }
+        }
+
+    }
+
+    @include tablet940{
+        display: block;
+    }
+
+    @include phone590{
+        ul{
+        flex-wrap: wrap;
+        li{
+            text-align: center;
+            width: 40%;
+            column-gap: 0;
+        }}
+    }
+}
+
+
+/*--------End ofStyling secondary nav------------*/
+
+
+footer{
+    height: 100px;
+    background-color: #555;
+}
