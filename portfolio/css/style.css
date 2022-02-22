@@ -251,7 +251,7 @@ main {
         grid-template-columns: 1fr 1fr;
   }
   #hero #aprvi {
-    background-image: url(../../img/creativity_pattern.png);
+    background-image: url(../img/creativity_pattern.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -267,7 +267,7 @@ main {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 0.5fr 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
-    background-image: url(../../img/creativity_pattern.png);
+    background-image: url(../img/creativity_pattern.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -373,7 +373,7 @@ main {
   padding-left: 2em;
   font-size: 1.5rem;
   position: relative;
-  background-image: url(../../img/creativity_pattern.png);
+  background-image: url(../img/creativity_pattern.png);
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
