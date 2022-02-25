@@ -10,6 +10,13 @@
     }
 }
 
+@mixin pc1030{
+    @media(max-width: 1030px){
+        @content;
+    }
+}
+
+
 @mixin tablet940{
     @media(max-width: 940px){
         @content;
@@ -17,7 +24,13 @@
 }
 
 @mixin phone690{
-    @media(max-width: 690px){
+    @media(max-width: 800px){
+        @content;
+    }
+}
+
+@mixin phone650{
+    @media(max-width: 650px){
         @content;
     }
 }
@@ -27,3 +40,4 @@
         @content;
     }
 }
+
