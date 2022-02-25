@@ -44,14 +44,14 @@
         bottom: -1px;
         right: -1px;
         left: -1px;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 48% 54%, 0 100%);}
     to {
         top: 0px;
         bottom: -1px;
         right: -1px;
         left: -1px;
 
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0); }
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 0, 0 0); }
   }
 
 
@@ -62,11 +62,45 @@ a{
     color: $white;
 }
 
+.naslov{
+    grid-area: skillh;
+    font-size: size(size-large);
+    font-family: $mainfont;
+    display: flex;
+    align-items: center;
+    color: $white;
+    letter-spacing: 0.1em;
+
+
+
+    h2{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 50%;
+            height: 0.3rem;
+            background-color: $svetloplava;
+            top: 0;
+            bottom: 0;
+            border-radius: 0.1rem;
+        }
+    }
+
+
+}
+
+
+
+.prikazi{
+    display: inline-block;
+}
+
 /*--------------End of globaly styled things-----------*/
 
 
 /*----------Styling Header-----------*/
-header{
+#glavni{
     position: sticky;
     top: 0;
     z-index: 10;
@@ -189,7 +223,7 @@ header{
 
 
 main{
-    height: 1500px;
+    height: auto;
     padding-left: 3%;
     padding-right: 3%;
     
@@ -272,6 +306,9 @@ main{
             @include pc1190{
                 font-size: size(size-regular1);
             }
+            @include tablet940{
+                font-size: size(size-regular);
+            }
 
 
         }
@@ -284,6 +321,9 @@ main{
 
             @include pc1190{
                 font-size: size(size-large1);
+            }
+            @include tablet940{
+                font-size: size(size-ultra-large);
             }
         }
 
@@ -394,6 +434,7 @@ main{
 #manjinav{
 
     display: none;
+    padding-top: 2em;
 
     ul{
 
@@ -456,6 +497,820 @@ main{
 
 
 /*--------End ofStyling secondary nav------------*/
+
+
+
+
+/*---------------Styling Skills Section----------------*/
+
+#skills{
+
+
+
+    height: auto;
+    padding-top: 5em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 0.05fr 1fr 0.05fr 0.05fr 1fr;
+    grid-template-areas: 
+
+
+    "skillh skillh skillh "
+    ". . . "
+    "skilla1 skilla2 skilla3 "
+    "skilla1 skilla2 . "
+    "skilla1 skilla2 . "
+    "skilla1 skilla2 skilla4 "
+    
+    ;
+
+
+
+
+
+    .lineheight{
+        li{
+            line-height: 2.7rem;
+
+            @include phone650{
+
+                line-height: 2.2rem;
+            }
+        }
+    }
+
+    article{
+        border-left: 0.2em solid rgba($color: $svetloplava, $alpha: 0.3);
+
+        padding-left: 1.4em;
+        padding-top: 0.8em;
+
+
+
+
+        h3{
+            margin-left: -0.4em;
+            color: $svetloplava;
+            font-family: $secondaryfont;
+            position: relative;
+
+            font-size: size(size-large);
+
+
+            &::before{
+
+                position: absolute;
+                content: '';
+                top: calc(50% - 0.4em);
+                
+                width: 0.8em;
+                height: 0.8em;
+    
+                background-color: $svetloplava;
+                border-radius: 50%;
+                left: -0.95em;
+            }
+        }
+
+        ul{
+            margin-top: 1.5em;
+            list-style-type: none;
+            font-family: $mainfont;
+            font-size:  size(size-regular);
+            color: rgb(197, 197, 197);
+        }
+
+        color:$white;
+    }
+
+    #skilla1{
+        grid-area: skilla1;
+    }
+
+    #skilla2{
+        grid-area: skilla2;
+    }
+
+    #skilla3{
+        grid-area: skilla3;
+    }
+
+    #skilla4{
+        grid-area: skilla4;
+    }
+
+
+    @include pc1030{
+        grid-template-columns: 1fr 0.7fr;
+        grid-template-rows: 80px 0.05fr 1fr 0.08fr 0.08fr 0.65fr;
+        grid-template-areas: 
+        "skillh skillh"
+        ". ."
+        "skilla1 skilla2"
+        ". ."
+        ". ."
+        "skilla3 skilla4 ";
+    }
+
+    @include phone650{
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 0.05fr 1fr 0.08fr 1fr 0.08fr 0.65fr 0.08fr 0.65fr;
+        grid-template-areas: 
+        "skillh"
+        "."
+        "skilla1"
+        "."
+        "skilla2"
+        "."
+        "skilla3"
+        "."
+        "skilla4";
+    }
+
+    }
+
+
+
+
+/*---------------End of styling skills section-------------*/
+
+/*---------Styling skills section--------*/
+
+
+#work{
+
+
+   /* height: auto;*/
+    padding-top: 5em;
+
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 1.5rem 1fr;
+
+    grid-template-areas: 
+        "workh workh workh workh"
+        ". . . ."
+        "worka1 worka2 worka3 worka4";
+        column-gap: 4em;
+
+        article{
+
+            border-radius: 0.5em;
+            background-color: rgb(25, 25, 25);
+
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            .linkovi{
+                margin-top: 0.5em;
+             /*   padding-left: 0.5em;*/
+                margin-bottom: 0.3em;
+
+                a{
+                    display: inline-block;
+                    padding-right: 1.3rem;
+                    padding-left: 0.6em;
+                    margin-bottom: 0.3em;
+
+                    font-family: $secondaryfont;
+                    font-size: size(size-small);
+                    color: rgb(197, 197, 197);
+
+
+                    &.visit{
+                        background-image: url(../img/arrow_white.svg);
+
+                        &:hover{
+                            background-image: url(../img/arrow_blue.svg);
+                        }
+                    }
+
+                    &:hover{
+
+                        color: $svetloplava;
+                    }
+                   
+                    background-position: center right;
+                    background-repeat: no-repeat;
+
+                    @include  phone690{
+                        margin-bottom: 0.6em;
+                    }
+
+                    @include phone590{
+                        font-size: size(size-regular1);
+
+                        &.visit{
+                            padding-right: 1.6rem;
+                        }
+                    }
+                }
+
+            }
+
+            figure{
+
+
+                img{
+                    width: 100%;
+                }
+
+                figcaption{
+
+                    h3{
+                        color: $svetloplava;
+
+
+                        margin-bottom: 0.5em;
+                        padding-left: 0.3em;
+                        font-family: $secondaryfont;
+                        font-size: size(size-regular1);
+                        letter-spacing: 0.1em;
+
+                        @include phone590{
+                            font-size: size(size-large);
+                        }
+                        
+                    }
+
+                    p{
+                        color: rgb(197, 197, 197);
+
+                        padding-left: 0.6em;
+                        margin-bottom: 0.5em;
+                        font-family: $secondaryfont;
+                        font-size: size(size-small);
+                        letter-spacing: 0.1em;
+
+                        @include phone590{
+                            font-size: size(size-regular1);
+                        }
+                    }
+
+                    .linkovi{
+                        align-self: flex-start;
+                    }
+
+  
+                }
+            }
+
+            @include  phone590{
+                
+
+                h3{
+                    margin-top: 0.4em;
+                    margin-left: 0.5em;
+                }
+
+                p{
+
+                    margin-left: 0.5em;
+                }
+
+            }
+        }
+
+
+    #workh{
+
+        grid-area: workh;
+    }
+
+    #worka1{
+        grid-area: worka1;
+
+    }
+
+    #worka2{
+        grid-area: worka2;
+    }
+
+
+    #worka3{
+        grid-area: worka3;
+    }
+
+    #worka4{
+        grid-area: worka4;
+    }
+
+    @include pc1030{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 80px 1.5rem 1fr 3rem 1fr;
+    
+        grid-template-areas: 
+            "workh workh workh"
+            ". . ."
+            "worka1 worka2 worka3"
+            ". . ."
+            "worka4 . ."
+            ;
+            column-gap: 4em;
+    }
+
+    @include  phone690{
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 1.5rem 1fr 3rem 1fr;
+    
+        grid-template-areas: 
+            "workh workh"
+            ". ."
+            "worka1 worka2"
+            ". ."
+            "worka3 worka4"
+            ;
+            column-gap: 4em;
+    }
+
+    @include  phone590{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1.5rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
+    
+        grid-template-areas: 
+            "workh"
+            "."
+            "worka1"
+            "."
+            "worka2"
+            "."
+            "worka3"
+            "."
+            "worka4"
+            ;
+            column-gap: 4em;
+    }
+
+}
+
+
+
+
+/*---------End ofStyling skills section--------*/
+
+
+
+/*-----------Styling about section------------*/
+
+#about{
+    height: auto;
+
+    padding-top: 5em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 1.5rem 1fr;
+    grid-template-areas: 
+    "abouth abouth abouth"
+    ". . ."
+    "abouta1 abouta2 aboutd"
+    ;
+
+
+    #abouth{
+
+        grid-area: abouth;
+
+    }
+
+    #abouta1{
+        grid-area: abouta1;
+        padding-top: 0.3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        border-left: 0.2em solid rgba($color: $svetloplava, $alpha: 0.3);
+
+        h3{
+            color: $svetloplava;
+            padding-left: 0.4em;
+            font-family: $secondaryfont;
+            font-size: size(size-large);
+        }
+
+        p{
+            padding-left: 0.8em;
+            font-family: $secondaryfont;
+            font-size: size(size-regular1);
+            margin-bottom: 0.7em;
+            margin-top: 0.2em;
+            color: rgb(197, 197, 197) ;
+        }
+    }
+
+    #abouta2{
+        grid-area: abouta2;
+            
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        figure{
+
+            width: 60%;
+            position: relative;
+
+
+
+            img{
+                width: 100%;
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: -15px;
+                left: -15px;
+                height: 2rem;
+                width: 2rem;
+                border-left: 3px solid $svetloplava;
+                border-top: 3px solid $svetloplava;
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                bottom: -15px;
+                right: -15px;
+                height: 2rem;
+                width: 2rem;
+                border-bottom: 3px solid $svetloplava;
+                border-right: 3px solid $svetloplava;
+            }
+
+
+
+        }
+        @include phone650{
+            figure{
+                width: 50%;
+            }
+    
+        }
+
+        @include phone650{
+            figure{
+                width: 100%;
+            }
+        }
+
+    }
+
+    #aboutd{
+        grid-area: aboutd;
+        background-image: url(../img/about_pattern.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    @include pc1030{
+        #aboutd{
+            display: none;
+        }
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 1.5rem 1fr;
+        grid-template-areas: 
+        "abouth abouth"
+        ". ."
+        "abouta1 abouta2"
+        ;
+        column-gap: 1rem;
+    
+    }
+
+    
+    @include phone650{
+        #aboutd{
+            display: block;
+            background-image: url(../img/about_pattern_vertical.png);
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        grid-template-columns: 0.6fr 0.4fr;
+        grid-template-rows: 80px 1.5rem 1fr 1.5rem 1fr;
+        grid-template-areas: 
+        "abouth abouth"
+        ". ."
+        "abouta2 aboutd"
+        ". aboutd"
+        "abouta1 aboutd"
+        ;
+
+        #abouta2{
+        
+            padding-left: 20px;
+            justify-content: flex-start;
+        }
+
+
+
+    
+    }
+
+    @include phone590{
+
+
+        grid-template-columns: 0.7fr 0.3fr;
+        grid-template-rows: 80px 1.5rem 1fr 1.5rem 1fr;
+        grid-template-areas: 
+        "abouth abouth"
+        ". ."
+        "abouta2 aboutd"
+        ". aboutd"
+        "abouta1 aboutd"
+        ;
+
+    }
+
+
+
+}
+
+
+/*-----------End of Styling about section------------*/
+
+
+/*----------Styling contact section------------*/
+
+
+#contact{
+    height: auto;
+
+    padding-top: 5em;
+    color: white;
+    padding-bottom: 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 80px 1.5rem 1fr;
+    grid-template-areas:
+        "contacth contacth contacth"
+        ". . ."
+        "contacta1 contactd contacta2"
+    ;
+
+    #contacth{
+
+        grid-area: contacth;
+    }
+
+    #contacta1{
+
+        grid-area: contacta1;
+
+        .lm{
+            height: 1.7rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        table{
+            width: 100%;
+            font-size: size(size-regular1);
+        }
+
+        label{
+            font-family: $secondaryfont;
+            margin-left: 0.4em;
+            
+        }
+
+        input{
+            margin-bottom: 0.9em;
+            width: 40%;
+            margin-left: 0.8em;
+            font-size: size(size-small);
+            font-family: $secondaryfont;
+            font-weight: bold;
+
+            &:focus{
+
+                outline-offset: -1px;
+                outline: 3px solid $svetloplava;;
+            }
+        }
+
+        textarea{
+            width:70%;
+            resize:none;
+            margin-left: 0.8em;
+            font-size: size(size-small);
+            font-family: $secondaryfont;
+            font-weight: bold;
+            height: 5rem;
+
+            &:focus{
+
+                outline-offset: -1px;
+                outline: 3px solid $svetloplava;
+                
+            }
+        }
+
+        @include pc1190{
+            input{
+                width: 70%;
+            }
+
+            textarea{
+                width: calc(100% - 0.8em);
+            } 
+
+
+        }
+
+        @include phone690{
+            input{
+                width: 50%;
+            }
+
+            textarea{
+                width: 70%;
+            } 
+        }
+
+        @include phone590{
+            input{
+                width: 70%;
+            }
+
+            textarea{
+                width: 90%;
+            } 
+
+        }
+    }
+
+    #contactd{
+        grid-area: contactd;
+
+        display: flex;
+        justify-content: left;
+        padding-top: 25%;
+        color: $svetloplava;
+        font-size: size(size-ultra-large);
+        font-family: $mainfont
+    }
+
+    @include pc1190{
+        #contactd{
+            justify-content: center;
+        }
+    }
+
+    #contacta2{
+        grid-area: contacta2;
+        display: flex;
+        flex-direction: column;
+
+        h4{
+            align-self: center;
+            font-size: size(size-regular);
+            font-family: $mainfont;
+            margin-bottom: 1.8rem;
+            letter-spacing: 0.08em;
+            color: white;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: '';
+                left: -35%;
+                top: calc(50% - 2px);
+                width: 30%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: $svetloplava;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                right: -35%;
+                top: calc(50% - 2px);
+                width: 30%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: $svetloplava;
+            }
+            
+        }
+
+        font-size: size(size-small);
+        font-family: $secondaryfont;
+        color: rgb(197, 197, 197);
+
+        p{
+            margin-top: 0.5em;
+            line-height: 1.2rem;
+
+            span{
+                color: $svetloplava;
+            }
+
+            @include phone690{
+                margin-left: 0.8em;
+                
+            }
+        }
+
+        a{
+            margin-right: 0.6em;
+            background-color: #191919;
+            color: #79adbb;
+            padding: 0.3em 0.6em;
+            border-radius: 0.2em;
+            display: flex;
+            align-items: center;
+            display: inline-block;
+            margin-bottom: 0.5em;
+
+
+            i{
+                margin-left: 0.2em;
+            }
+
+            &:hover{
+
+
+                color: black;
+                background-color: #79adbb;
+                font-weight: bold;
+
+            }
+
+            @include phone690{
+                margin-left: 0.8em;
+                
+            }
+        }
+
+
+    }
+
+    @include pc1030{
+
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 80px 1.5rem 1fr;
+        grid-template-areas:
+            "contacth contacth contacth"
+            ". . ."
+            "contacta1 contactd contacta2"
+        ;
+        
+        column-gap: 1rem;
+
+    }
+
+    @include tablet940{
+        column-gap: unset;
+        
+        #contactd{
+            margin-right: 4rem;
+        }
+    }
+
+    @include phone690{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1.5rem auto 2rem auto 2rem auto;
+        grid-template-areas:
+            "contacth"
+            "."
+            "contacta1"
+            "."
+            "contactd"
+            "."
+            "contacta2"
+        ;
+
+
+
+
+        #contactd{
+            margin-right: 0;
+            padding: 0;
+        }
+    }
+
+
+
+}
+
+/*----------End of Styling contact section------------*/
+
 
 
 footer{
