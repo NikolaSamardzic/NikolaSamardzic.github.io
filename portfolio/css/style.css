@@ -62,16 +62,16 @@ font-family: 'Poppins', sans-serif;*/
     bottom: -1px;
     right: -1px;
     left: -1px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 48% 54%, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 48% 54%, 0 100%);
   }
   to {
     top: 0px;
     bottom: -1px;
     right: -1px;
     left: -1px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 0, 0 0);
   }
 }
 
@@ -81,16 +81,16 @@ font-family: 'Poppins', sans-serif;*/
     bottom: -1px;
     right: -1px;
     left: -1px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 48% 54%, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 48% 54%, 0 100%);
   }
   to {
     top: 0px;
     bottom: -1px;
     right: -1px;
     left: -1px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 0, 0 0);
   }
 }
 
@@ -100,9 +100,45 @@ a {
   color: white;
 }
 
+.naslov {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: skillh;
+  font-size: 1.6rem;
+  font-family: "Poppins";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.naslov h2 {
+  position: relative;
+}
+
+.naslov h2::before {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 0.3rem;
+  background-color: #99d9ea;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.1rem;
+}
+
+.prikazi {
+  display: inline-block;
+}
+
 /*--------------End of globaly styled things-----------*/
 /*----------Styling Header-----------*/
-header {
+#glavni {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -123,13 +159,13 @@ header {
           align-items: center;
 }
 
-header a {
+#glavni a {
   font-family: "Poppins";
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
 }
 
-header #logo {
+#glavni #logo {
   font-family: "Montserrat";
   letter-spacing: 0.3rem;
   font-weight: 500;
@@ -144,16 +180,16 @@ header #logo {
   transition: 300ms;
 }
 
-header #logo:hover {
+#glavni #logo:hover {
   background-position: 3.85rem;
 }
 
-header #nesto {
+#glavni #nesto {
   position: relative;
   z-index: 2;
 }
 
-header #nesto ::before {
+#glavni #nesto ::before {
   content: '';
   position: absolute;
   display: inline-block;
@@ -168,13 +204,13 @@ header #nesto ::before {
   z-index: -1;
 }
 
-header #nesto :hover::before {
+#glavni #nesto :hover::before {
   -webkit-transform: translateX(96%);
           transform: translateX(96%);
   z-index: -1;
 }
 
-header ul {
+#glavni ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,15 +218,15 @@ header ul {
   gap: 2em;
 }
 
-header ul li {
+#glavni ul li {
   position: relative;
 }
 
-header ul li a {
+#glavni ul li a {
   display: inline-block;
 }
 
-header ul li a::before {
+#glavni ul li a::before {
   content: '';
   position: absolute;
   height: 2px;
@@ -202,21 +238,21 @@ header ul li a::before {
   transition: 300ms;
 }
 
-header ul li a:hover::before {
+#glavni ul li a:hover::before {
   background-color: #99d9ea;
   width: 100%;
   left: 0;
 }
 
-header .fa {
+#glavni .fa {
   display: none;
 }
 
 @media (max-width: 940px) {
-  header nav {
+  #glavni nav {
     display: none;
   }
-  header .fa {
+  #glavni .fa {
     display: inline-block;
     color: #99d9ea;
     font-size: 2rem;
@@ -225,7 +261,7 @@ header .fa {
 
 /*----------End of styling Header-----------*/
 main {
-  height: 1500px;
+  height: auto;
   padding-left: 3%;
   padding-right: 3%;
   background-color: black;
@@ -261,7 +297,7 @@ main {
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 800px) {
   #hero {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -309,6 +345,12 @@ main {
   }
 }
 
+@media (max-width: 940px) {
+  #hero article #naslov1 {
+    font-size: 1.5rem;
+  }
+}
+
 #hero article #naslov2 {
   position: relative;
   font-size: 2.1rem;
@@ -321,6 +363,12 @@ main {
 @media (max-width: 1190px) {
   #hero article #naslov2 {
     font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 940px) {
+  #hero article #naslov2 {
+    font-size: 2.1rem;
   }
 }
 
@@ -339,7 +387,7 @@ main {
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 800px) {
   #hero #heroslika {
     background-position-y: -150px;
     background-position-x: -30px;
@@ -402,7 +450,7 @@ main {
   margin-left: -1em;
 }
 
-@media (max-width: 690px) {
+@media (max-width: 800px) {
   #hero #adrugi {
     background-image: none;
   }
@@ -416,6 +464,7 @@ main {
 /*--------Styling secondary nav------------*/
 #manjinav {
   display: none;
+  padding-top: 2em;
 }
 
 #manjinav ul {
@@ -482,6 +531,736 @@ main {
 }
 
 /*--------End ofStyling secondary nav------------*/
+/*---------------Styling Skills Section----------------*/
+#skills {
+  height: auto;
+  padding-top: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 80px 0.05fr 1fr 0.05fr 0.05fr 1fr;
+      grid-template-rows: 80px 0.05fr 1fr 0.05fr 0.05fr 1fr;
+      grid-template-areas: "skillh skillh skillh " ". . . " "skilla1 skilla2 skilla3 " "skilla1 skilla2 . " "skilla1 skilla2 . " "skilla1 skilla2 skilla4 ";
+}
+
+#skills .lineheight li {
+  line-height: 2.7rem;
+}
+
+@media (max-width: 650px) {
+  #skills .lineheight li {
+    line-height: 2.2rem;
+  }
+}
+
+#skills article {
+  border-left: 0.2em solid rgba(153, 217, 234, 0.3);
+  padding-left: 1.4em;
+  padding-top: 0.8em;
+  color: white;
+}
+
+#skills article h3 {
+  margin-left: -0.4em;
+  color: #99d9ea;
+  font-family: "Montserrat";
+  position: relative;
+  font-size: 1.6rem;
+}
+
+#skills article h3::before {
+  position: absolute;
+  content: '';
+  top: calc(50% - 0.4em);
+  width: 0.8em;
+  height: 0.8em;
+  background-color: #99d9ea;
+  border-radius: 50%;
+  left: -0.95em;
+}
+
+#skills article ul {
+  margin-top: 1.5em;
+  list-style-type: none;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  color: #c5c5c5;
+}
+
+#skills #skilla1 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  grid-area: skilla1;
+}
+
+#skills #skilla2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 2;
+  grid-area: skilla2;
+}
+
+#skills #skilla3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: skilla3;
+}
+
+#skills #skilla4 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+  grid-area: skilla4;
+}
+
+@media (max-width: 1030px) {
+  #skills {
+    -ms-grid-columns: 1fr 0.7fr;
+        grid-template-columns: 1fr 0.7fr;
+    -ms-grid-rows: 80px 0.05fr 1fr 0.08fr 0.08fr 0.65fr;
+        grid-template-rows: 80px 0.05fr 1fr 0.08fr 0.08fr 0.65fr;
+        grid-template-areas: "skillh skillh" ". ." "skilla1 skilla2" ". ." ". ." "skilla3 skilla4 ";
+  }
+}
+
+@media (max-width: 650px) {
+  #skills {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 80px 0.05fr 1fr 0.08fr 1fr 0.08fr 0.65fr 0.08fr 0.65fr;
+        grid-template-rows: 80px 0.05fr 1fr 0.08fr 1fr 0.08fr 0.65fr 0.08fr 0.65fr;
+        grid-template-areas: "skillh" "." "skilla1" "." "skilla2" "." "skilla3" "." "skilla4";
+  }
+}
+
+/*---------------End of styling skills section-------------*/
+/*---------Styling skills section--------*/
+#work {
+  /* height: auto;*/
+  padding-top: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 80px 1.5rem 1fr;
+      grid-template-rows: 80px 1.5rem 1fr;
+      grid-template-areas: "workh workh workh workh" ". . . ." "worka1 worka2 worka3 worka4";
+  -webkit-column-gap: 4em;
+          column-gap: 4em;
+}
+
+#work article {
+  border-radius: 0.5em;
+  background-color: #191919;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#work article .linkovi {
+  margin-top: 0.5em;
+  /*   padding-left: 0.5em;*/
+  margin-bottom: 0.3em;
+}
+
+#work article .linkovi a {
+  display: inline-block;
+  padding-right: 1.3rem;
+  padding-left: 0.6em;
+  margin-bottom: 0.3em;
+  font-family: "Montserrat";
+  font-size: 0.95rem;
+  color: #c5c5c5;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+#work article .linkovi a.visit {
+  background-image: url(../img/arrow_white.svg);
+}
+
+#work article .linkovi a.visit:hover {
+  background-image: url(../img/arrow_blue.svg);
+}
+
+#work article .linkovi a:hover {
+  color: #99d9ea;
+}
+
+@media (max-width: 800px) {
+  #work article .linkovi a {
+    margin-bottom: 0.6em;
+  }
+}
+
+@media (max-width: 590px) {
+  #work article .linkovi a {
+    font-size: 1.2rem;
+  }
+  #work article .linkovi a.visit {
+    padding-right: 1.6rem;
+  }
+}
+
+#work article figure img {
+  width: 100%;
+}
+
+#work article figure figcaption h3 {
+  color: #99d9ea;
+  margin-bottom: 0.5em;
+  padding-left: 0.3em;
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 590px) {
+  #work article figure figcaption h3 {
+    font-size: 1.6rem;
+  }
+}
+
+#work article figure figcaption p {
+  color: #c5c5c5;
+  padding-left: 0.6em;
+  margin-bottom: 0.5em;
+  font-family: "Montserrat";
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 590px) {
+  #work article figure figcaption p {
+    font-size: 1.2rem;
+  }
+}
+
+#work article figure figcaption .linkovi {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media (max-width: 590px) {
+  #work article h3 {
+    margin-top: 0.4em;
+    margin-left: 0.5em;
+  }
+  #work article p {
+    margin-left: 0.5em;
+  }
+}
+
+#work #workh {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: workh;
+}
+
+#work #worka1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: worka1;
+}
+
+#work #worka2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: worka2;
+}
+
+#work #worka3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: worka3;
+}
+
+#work #worka4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: worka4;
+}
+
+@media (max-width: 1030px) {
+  #work {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 80px 1.5rem 1fr 3rem 1fr;
+        grid-template-rows: 80px 1.5rem 1fr 3rem 1fr;
+        grid-template-areas: "workh workh workh" ". . ." "worka1 worka2 worka3" ". . ." "worka4 . .";
+    -webkit-column-gap: 4em;
+            column-gap: 4em;
+  }
+}
+
+@media (max-width: 800px) {
+  #work {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 80px 1.5rem 1fr 3rem 1fr;
+        grid-template-rows: 80px 1.5rem 1fr 3rem 1fr;
+        grid-template-areas: "workh workh" ". ." "worka1 worka2" ". ." "worka3 worka4";
+    -webkit-column-gap: 4em;
+            column-gap: 4em;
+  }
+}
+
+@media (max-width: 590px) {
+  #work {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 80px 1.5rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
+        grid-template-rows: 80px 1.5rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
+        grid-template-areas: "workh" "." "worka1" "." "worka2" "." "worka3" "." "worka4";
+    -webkit-column-gap: 4em;
+            column-gap: 4em;
+  }
+}
+
+/*---------End ofStyling skills section--------*/
+/*-----------Styling about section------------*/
+#about {
+  height: auto;
+  padding-top: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 80px 1.5rem 1fr;
+      grid-template-rows: 80px 1.5rem 1fr;
+      grid-template-areas: "abouth abouth abouth" ". . ." "abouta1 abouta2 aboutd";
+}
+
+#about #abouth {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: abouth;
+}
+
+#about #abouta1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: abouta1;
+  padding-top: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-left: 0.2em solid rgba(153, 217, 234, 0.3);
+}
+
+#about #abouta1 h3 {
+  color: #99d9ea;
+  padding-left: 0.4em;
+  font-family: "Montserrat";
+  font-size: 1.6rem;
+}
+
+#about #abouta1 p {
+  padding-left: 0.8em;
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  margin-bottom: 0.7em;
+  margin-top: 0.2em;
+  color: #c5c5c5;
+}
+
+#about #abouta2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: abouta2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about #abouta2 figure {
+  width: 60%;
+  position: relative;
+}
+
+#about #abouta2 figure img {
+  width: 100%;
+}
+
+#about #abouta2 figure::before {
+  position: absolute;
+  content: '';
+  top: -15px;
+  left: -15px;
+  height: 2rem;
+  width: 2rem;
+  border-left: 3px solid #99d9ea;
+  border-top: 3px solid #99d9ea;
+}
+
+#about #abouta2 figure::after {
+  position: absolute;
+  content: '';
+  bottom: -15px;
+  right: -15px;
+  height: 2rem;
+  width: 2rem;
+  border-bottom: 3px solid #99d9ea;
+  border-right: 3px solid #99d9ea;
+}
+
+@media (max-width: 650px) {
+  #about #abouta2 figure {
+    width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  #about #abouta2 figure {
+    width: 100%;
+  }
+}
+
+#about #aboutd {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: aboutd;
+  background-image: url(../img/about_pattern.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 1030px) {
+  #about {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 80px 1.5rem 1fr;
+        grid-template-rows: 80px 1.5rem 1fr;
+        grid-template-areas: "abouth abouth" ". ." "abouta1 abouta2";
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  #about #aboutd {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  #about {
+    -ms-grid-columns: 0.6fr 0.4fr;
+        grid-template-columns: 0.6fr 0.4fr;
+    -ms-grid-rows: 80px 1.5rem 1fr 1.5rem 1fr;
+        grid-template-rows: 80px 1.5rem 1fr 1.5rem 1fr;
+        grid-template-areas: "abouth abouth" ". ." "abouta2 aboutd" ". aboutd" "abouta1 aboutd";
+  }
+  #about #aboutd {
+    display: block;
+    background-image: url(../img/about_pattern_vertical.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #about #abouta2 {
+    padding-left: 20px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (max-width: 590px) {
+  #about {
+    -ms-grid-columns: 0.7fr 0.3fr;
+        grid-template-columns: 0.7fr 0.3fr;
+    -ms-grid-rows: 80px 1.5rem 1fr 1.5rem 1fr;
+        grid-template-rows: 80px 1.5rem 1fr 1.5rem 1fr;
+        grid-template-areas: "abouth abouth" ". ." "abouta2 aboutd" ". aboutd" "abouta1 aboutd";
+  }
+}
+
+/*-----------End of Styling about section------------*/
+/*----------Styling contact section------------*/
+#contact {
+  height: auto;
+  padding-top: 5em;
+  color: white;
+  padding-bottom: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.5fr 1fr;
+      grid-template-columns: 1fr 0.5fr 1fr;
+  -ms-grid-rows: 80px 1.5rem 1fr;
+      grid-template-rows: 80px 1.5rem 1fr;
+      grid-template-areas: "contacth contacth contacth" ". . ." "contacta1 contactd contacta2";
+}
+
+#contact #contacth {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: contacth;
+}
+
+#contact #contacta1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contacta1;
+}
+
+#contact #contacta1 .lm {
+  height: 1.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#contact #contacta1 table {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+#contact #contacta1 label {
+  font-family: "Montserrat";
+  margin-left: 0.4em;
+}
+
+#contact #contacta1 input {
+  margin-bottom: 0.9em;
+  width: 40%;
+  margin-left: 0.8em;
+  font-size: 0.95rem;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+#contact #contacta1 input:focus {
+  outline-offset: -1px;
+  outline: 3px solid #99d9ea;
+}
+
+#contact #contacta1 textarea {
+  width: 70%;
+  resize: none;
+  margin-left: 0.8em;
+  font-size: 0.95rem;
+  font-family: "Montserrat";
+  font-weight: bold;
+  height: 5rem;
+}
+
+#contact #contacta1 textarea:focus {
+  outline-offset: -1px;
+  outline: 3px solid #99d9ea;
+}
+
+@media (max-width: 1190px) {
+  #contact #contacta1 input {
+    width: 70%;
+  }
+  #contact #contacta1 textarea {
+    width: calc(100% - 0.8em);
+  }
+}
+
+@media (max-width: 800px) {
+  #contact #contacta1 input {
+    width: 50%;
+  }
+  #contact #contacta1 textarea {
+    width: 70%;
+  }
+}
+
+@media (max-width: 590px) {
+  #contact #contacta1 input {
+    width: 70%;
+  }
+  #contact #contacta1 textarea {
+    width: 90%;
+  }
+}
+
+#contact #contactd {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: contactd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding-top: 25%;
+  color: #99d9ea;
+  font-size: 2.1rem;
+  font-family: "Poppins";
+}
+
+@media (max-width: 1190px) {
+  #contact #contactd {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#contact #contacta2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: contacta2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.95rem;
+  font-family: "Montserrat";
+  color: #c5c5c5;
+}
+
+#contact #contacta2 h4 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.08em;
+  color: white;
+  position: relative;
+}
+
+#contact #contacta2 h4::before {
+  position: absolute;
+  content: '';
+  left: -35%;
+  top: calc(50% - 2px);
+  width: 30%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #99d9ea;
+}
+
+#contact #contacta2 h4::after {
+  position: absolute;
+  content: '';
+  right: -35%;
+  top: calc(50% - 2px);
+  width: 30%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #99d9ea;
+}
+
+#contact #contacta2 p {
+  margin-top: 0.5em;
+  line-height: 1.2rem;
+}
+
+#contact #contacta2 p span {
+  color: #99d9ea;
+}
+
+@media (max-width: 800px) {
+  #contact #contacta2 p {
+    margin-left: 0.8em;
+  }
+}
+
+#contact #contacta2 a {
+  margin-right: 0.6em;
+  background-color: #191919;
+  color: #79adbb;
+  padding: 0.3em 0.6em;
+  border-radius: 0.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+#contact #contacta2 a i {
+  margin-left: 0.2em;
+}
+
+#contact #contacta2 a:hover {
+  color: black;
+  background-color: #79adbb;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  #contact #contacta2 a {
+    margin-left: 0.8em;
+  }
+}
+
+@media (max-width: 1030px) {
+  #contact {
+    -ms-grid-columns: 1fr auto 1fr;
+        grid-template-columns: 1fr auto 1fr;
+    -ms-grid-rows: 80px 1.5rem 1fr;
+        grid-template-rows: 80px 1.5rem 1fr;
+        grid-template-areas: "contacth contacth contacth" ". . ." "contacta1 contactd contacta2";
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+}
+
+@media (max-width: 940px) {
+  #contact {
+    -webkit-column-gap: unset;
+            column-gap: unset;
+  }
+  #contact #contactd {
+    margin-right: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #contact {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 80px 1.5rem auto 2rem auto 2rem auto;
+        grid-template-rows: 80px 1.5rem auto 2rem auto 2rem auto;
+        grid-template-areas: "contacth" "." "contacta1" "." "contactd" "." "contacta2";
+  }
+  #contact #contactd {
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+/*----------End of Styling contact section------------*/
 footer {
   height: 100px;
   background-color: #555;
