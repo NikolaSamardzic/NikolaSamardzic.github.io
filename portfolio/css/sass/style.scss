@@ -1048,6 +1048,7 @@ main{
 
 #contact{
     height: auto;
+    border-bottom: 3px solid $svetloplava;
 
     padding-top: 5em;
     color: white;
@@ -1070,6 +1071,56 @@ main{
     #contacta1{
 
         grid-area: contacta1;
+
+
+        .dugmetd{
+         
+            display: flex;
+
+            input{
+                width: 23%;
+                padding: 0.2em 0.3em;
+
+                &#submit{
+                    color: $svetloplava;
+                    background-color: #191919;
+                    border: none;
+                    border-radius: 0.2em;
+
+                    &:focus{
+                        outline: none;
+                    }
+
+                    &:hover{
+
+                        color: $black;
+                        background-color: #79adbb;
+                        font-weight: bold;
+                        cursor:pointer;
+                    }
+                }
+
+                &#reset{
+
+                    color: rgb(197, 197, 197);
+                    background-color: transparent;
+                    border: none;
+                    padding: 0%;
+                    width: 15%;
+                    &:focus{
+                        outline: none;
+                    }
+
+                    &:hover{
+
+                        color: $svetloplava;
+                        cursor:pointer;
+                    }
+
+                }
+            }
+
+        }
 
         .lm{
             height: 1.7rem;
@@ -1111,6 +1162,7 @@ main{
             font-family: $secondaryfont;
             font-weight: bold;
             height: 5rem;
+            margin-bottom: 1em;
 
             &:focus{
 
@@ -1314,6 +1366,32 @@ main{
 
 
 footer{
-    height: 100px;
-    background-color: #555;
+    color: $white;
+    height: auto;
+    padding-bottom: 2em;
+    background-color: $black;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2em;
+
+    nav{
+
+        p{
+            font-family: $mainfont;
+            margin-right: 1.5rem;
+        }
+
+        a{
+            font-family: $secondaryfont;
+            margin-right: 1rem;
+
+
+            &:hover{
+                color: $svetloplava;
+            }
+        }
+
+        display: flex;
+        align-items: center;
+    }
 }
