@@ -1348,16 +1348,11 @@ main{
             "contacta2"
         ;
 
-
-
-
         #contactd{
             margin-right: 0;
             padding: 0;
         }
     }
-
-
 
 }
 
@@ -1368,7 +1363,7 @@ main{
 footer{
     color: $white;
     height: auto;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     background-color: $black;
     padding-left: 3%;
     padding-right: 3%;
@@ -1379,15 +1374,24 @@ footer{
         p{
             font-family: $mainfont;
             margin-right: 1.5rem;
+            align-self: flex-start;
+
         }
 
         a{
             font-family: $secondaryfont;
             margin-right: 1rem;
+            display: inline-block;
+            margin-bottom: 1em;
 
 
             &:hover{
                 color: $svetloplava;
+            }
+
+            div{
+                display: flex;
+                flex-wrap: wrap;
             }
         }
 
