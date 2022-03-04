@@ -62,6 +62,8 @@ a{
     color: $white;
 }
 
+
+
 .naslov{
     grid-area: skillh;
     font-size: size(size-large);
@@ -114,6 +116,9 @@ a{
     @include flexSpaceBetweenAlignCenter;
 
     a{
+
+        
+
         font-family: $mainfont;
         font-size: size(size-large);
         letter-spacing: 0.1rem;
@@ -260,7 +265,7 @@ main{
         }
     }
 
-    @include phone690{
+    @include tablet700{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
 
@@ -307,8 +312,13 @@ main{
                 font-size: size(size-regular1);
             }
             @include tablet940{
+                font-size: size(size-regular1);
+            }
+            @include tablet700{
                 font-size: size(size-regular);
             }
+
+
 
 
         }
@@ -323,8 +333,14 @@ main{
                 font-size: size(size-large1);
             }
             @include tablet940{
-                font-size: size(size-ultra-large);
+                font-size: size(size-large1);
             }
+
+            @include tablet700{
+                font-size: size(size-large2);
+            }
+
+
         }
 
     }
@@ -343,7 +359,7 @@ main{
 
         }
 
-        @include phone690{
+        @include tablet700{
            
                 background-position-y: -150px;
                 background-position-x: -30px;
@@ -409,7 +425,7 @@ main{
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
-        @include phone690{
+        @include tablet700{
             background-image: none;
         }
 
@@ -456,6 +472,7 @@ main{
 
 
             a{
+
                 display: inline-block;
 
                 &::before{
@@ -643,6 +660,7 @@ main{
 
    /* height: auto;*/
     padding-top: 5em;
+
 
 
 
