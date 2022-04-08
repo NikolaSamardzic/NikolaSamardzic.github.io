@@ -1,0 +1,38 @@
+
+@mixin rsm{
+    @media(min-width: 576px){
+        @content;
+    }
+}
+
+@mixin rmd{
+    @media(min-width: 768px){
+        @content;
+    }
+}
+
+
+@mixin rlg{
+    @media(min-width: 992px){
+        @content;
+    }
+}
+
+@mixin rxl{
+    @media(min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin rxxl{
+    @media(min-width: 1400px){
+        @content;
+    }
+}
+
+
+@mixin r850{
+    @media(min-width: 850px){
+        @content;
+    }
+}

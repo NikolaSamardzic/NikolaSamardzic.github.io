@@ -1,0 +1,214 @@
+/*--------------   hexagon styling    ----------------------*/
+body {
+  height: 1000px;
+  background-color: #8a8a8a;
+  position: relative;
+}
+
+#nav-id {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-bottom: solid 2px transparent;
+  background-clip: padding-box;
+}
+
+#nav-id #logo-ime {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+/*    HERO SECTION STYLING      */
+.hero {
+  height: 160vh;
+  position: relative;
+  background-color: #00004d;
+}
+
+@media (min-width: 576px) {
+  .hero {
+    height: 100vh;
+  }
+}
+
+.hero #hero-container {
+  height: 100%;
+  background-color: #2e381b;
+}
+
+.hero #hero-container .row {
+  width: inherit;
+  height: inherit;
+}
+
+.hero #hero-container .row #tekst {
+  height: 50%;
+  /* width: 50%;*/
+  background-color: #360736;
+}
+
+@media (min-width: 576px) {
+  .hero #hero-container .row #tekst {
+    height: 100%;
+  }
+}
+
+/*      HEKSAGONI        */
+#heksagoni {
+  /*  width: 50%;*/
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+}
+
+@media (min-width: 576px) {
+  #heksagoni {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+  }
+}
+
+#heksagoni #prvi {
+  position: absolute;
+  width: 45vh;
+  height: 45vh;
+  top: 30%;
+  left: -3vh;
+  outline: 1px solid white;
+}
+
+@media (min-width: 576px) {
+  #heksagoni #prvi {
+    position: absolute;
+    width: 35vh;
+    height: 35vh;
+    top: 30%;
+    left: -3vh;
+    outline: 1px solid white;
+  }
+}
+
+@media (min-width: 850px) {
+  #heksagoni #prvi {
+    position: absolute;
+    width: 45vh;
+    height: 45vh;
+    top: 30%;
+    left: -3vh;
+    outline: 1px solid white;
+  }
+}
+
+@media (min-width: 992px) {
+  #heksagoni #prvi {
+    position: absolute;
+    width: 45vh;
+    height: 45vh;
+    top: 30%;
+    left: -3vh;
+    outline: 1px solid white;
+  }
+}
+
+@media (min-width: 1400px) {
+  #heksagoni #prvi {
+    position: absolute;
+    width: 55vh;
+    height: 55vh;
+    top: 30%;
+    left: -3vh;
+    outline: 1px solid white;
+  }
+}
+
+#heksagoni #prvi #glavni-prvi {
+  width: 100%;
+  height: 100%;
+  background-color: #3c2d44;
+  -webkit-clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+          clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+#heksagoni #prvi #glavni-drugi {
+  width: 100%;
+  height: 100%;
+  background-color: #234247;
+  -webkit-clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+          clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  position: absolute;
+  bottom: -80%;
+  right: -57%;
+}
+
+@media (min-width: 992px) {
+  #heksagoni #prvi #glavni-drugi {
+    bottom: -44%;
+    right: -125%;
+  }
+}
+
+#heksagoni #prvi #glavni-treci {
+  width: 100%;
+  height: 100%;
+  background-color: #2e4723;
+  -webkit-clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+          clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  position: absolute;
+  top: -80%;
+  right: -57%;
+}
+
+@media (min-width: 992px) {
+  #heksagoni #prvi #glavni-treci {
+    top: -112%;
+    right: -101%;
+  }
+}
+
+#heksagoni #prvi .prvi-deca {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  background-color: red;
+  -webkit-clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+          clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+@media (min-width: 850px) {
+  #heksagoni #prvi .prvi-deca {
+    width: 45%;
+    height: 45%;
+  }
+}
+
+#heksagoni #prvi #prvi-prvi {
+  right: -22.5%;
+  top: -29%;
+}
+
+#heksagoni #prvi #prvi-drugi {
+  right: 4%;
+  bottom: -43%;
+}
+
+#heksagoni #prvi #prvi-treci {
+  right: -48%;
+  top: 14%;
+}
+
+#heksagoni #prvi #prvi-cetvrti {
+  background-color: darkorange;
+  right: -15%;
+  top: 52%;
+  z-index: 3;
+}
+
+.proba {
+  width: 100%;
+  height: 1500px;
+  background-color: darkgreen;
+}
+/*# sourceMappingURL=style.css.map */

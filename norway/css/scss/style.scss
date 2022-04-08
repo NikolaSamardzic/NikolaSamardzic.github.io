@@ -1,0 +1,219 @@
+@import './responsive';
+
+
+/*--------------   hexagon styling    ----------------------*/
+
+body{
+    height: 1000px;
+    background-color: rgb(138, 138, 138);
+    position: relative;
+}
+
+
+
+#nav-id{
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    border-bottom: solid 2px transparent;
+    background-clip: padding-box;
+
+    #logo-ime{
+        
+        font-size: 2.5rem;
+        letter-spacing: 0.1rem;
+
+    }
+}
+
+
+/*    HERO SECTION STYLING      */
+
+    .hero{
+        height: 160vh;
+        position: relative;
+        @include rsm{
+            height: 100vh;
+        }
+
+
+        background-color: rgb(0, 0, 77);
+
+
+        #hero-container{
+            height: 100%;
+            background-color: rgb(46, 56, 27);
+
+            .row{
+                width: inherit;
+                height: inherit;
+
+                #tekst{
+                    height: 50%;
+                    @include rsm{
+                        height: 100%;
+                    }
+
+                   /* width: 50%;*/
+                    background-color: rgb(54, 7, 54);
+                }
+            }
+
+        }
+    }
+
+
+
+    /*      HEKSAGONI        */
+
+
+    #heksagoni{
+      /*  width: 50%;*/
+        height: 50%;
+        overflow: hidden;
+        position: relative;
+
+        background-color: black;
+
+       @include rsm{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 50%;
+       }
+
+        #prvi{
+
+            position: absolute;
+            width: 45vh;
+            height: 45vh;
+            top: 30%;
+            left:  -((60vh/100)*5);
+            outline: 1px solid white;
+
+            @include rsm{
+                position: absolute;
+                width: 35vh;
+                height: 35vh;
+                top: 30%;
+                left:  -((60vh/100)*5);
+                outline: 1px solid white;
+            }
+
+            @include r850{
+                position: absolute;
+                width: 45vh;
+                height: 45vh;
+                top: 30%;
+                left:  -((60vh/100)*5);
+                outline: 1px solid white;
+    
+            }
+
+
+            @include rlg{
+                position: absolute;
+                width: 45vh;
+                height: 45vh;
+                top: 30%;
+                left:  -((60vh/100)*5);
+                outline: 1px solid white;
+    
+            }
+
+            @include rxxl{
+                position: absolute;
+                width: 55vh;
+                height: 55vh;
+                top: 30%;
+                left:  -((60vh/100)*5);
+                outline: 1px solid white;
+            }
+
+
+            #glavni-prvi{
+                width: 100%;
+                height: 100%;
+                background-color: rgb(60, 45, 68);
+                clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+            }
+
+            #glavni-drugi{
+                width: 100%;
+                height: 100%;
+                background-color: rgb(35, 66, 71);
+                clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+                position: absolute;
+                bottom: -80%;
+                right: -57%;
+
+                @include rlg{
+                    bottom: -44%;
+                    right: -125%;
+                }
+            }
+
+            #glavni-treci{
+                width: 100%;
+                height: 100%;
+                background-color: rgb(46, 71, 35);
+                clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+                position: absolute;
+                top: -80%;
+                right: -57%;
+
+                @include rlg{
+                    top: -112%;
+                    right: -101%;
+                }
+            }
+
+            .prvi-deca{
+                position: absolute;
+                width: 55%;
+                height: 55%;
+                background-color: red;
+                clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+
+
+                @include r850{
+                    width: 45%;
+                    height: 45%;
+                }
+            }
+
+            #prvi-prvi{
+
+                right: -22.5%;
+                top: -29%;
+            }
+            #prvi-drugi{
+
+                right: 4%;
+                bottom: -43%;
+            }
+
+            #prvi-treci{
+
+                right: -48%;
+                top: 14%;
+            }
+
+            #prvi-cetvrti{
+
+                background-color: darkorange;
+                right: -15%;
+                top: 52%;
+                z-index: 3;
+            }
+
+        }
+    }
+
+
+
+.proba{
+    width: 100%;
+    height: 1500px;
+    background-color: darkgreen;
+}
