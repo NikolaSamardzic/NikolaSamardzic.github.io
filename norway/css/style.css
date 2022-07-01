@@ -183,7 +183,7 @@ body {
 .hero {
   height: 160vh;
   position: relative;
-  background-image: url(img/pozadina2.jpg);
+  background-image: url(../img/pozadina2.jpg);
   background-size: cover;
 }
 
