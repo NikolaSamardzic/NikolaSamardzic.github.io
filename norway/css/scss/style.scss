@@ -1,4 +1,6 @@
+@import './variables';
 @import './responsive';
+
 
 
 /*--------------   hexagon styling    ----------------------*/
@@ -13,7 +15,7 @@ body{
 
 #nav-id{
 
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(3px);
     border-bottom: solid 2px transparent;
     background-clip: padding-box;
@@ -21,9 +23,59 @@ body{
 
     #logo-ime{
         
-        font-size: 2.5rem;
+        font-size: size(size-large3);
         letter-spacing: 0.1rem;
+        color: $white;
+        font-family: $secondaryfont;
+        letter-spacing: 0.2rem;
+        transition: 300ms ease-in-out;
 
+        &:hover{
+
+            color: $svetloplava;
+        }
+
+        img{
+            height: 3rem;
+            margin-right: 0.3rem;
+        }
+
+    }
+
+    #glavni-linkovi{
+        a{
+            color: $white;
+            font-family: $mainfont;
+            display: inline-block;
+            position: relative;
+            transition: 300ms ease-in-out;
+
+            &::before{
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 60%;
+                background-color: $svetloplava;
+                left: 20%;
+                top: 4.2rem;
+                border-radius: 3px;
+                opacity: 0.0;
+                transition: 300ms ease-in-out;
+
+            }
+
+            &:hover::before{
+                width: 60%;
+                top: 3.3rem;
+                opacity: 1.0;
+
+            }
+
+            &:hover{
+                color: $svetloplava;
+
+            }
+        }
     }
 }
 
@@ -34,7 +86,7 @@ body{
     position: fixed;
     width: 13px;
     height: 100vh;
-    background-color: aqua;
+    background-color: $svetloplava;
     right: -1px;
     top: 0;
     z-index: 10;
@@ -44,18 +96,21 @@ body{
         top: 65%;
         width: 65px;
         height: 65px;
-        background-color: aqua;
+        background-color: $svetloplava;
         left: -35px;
         border-radius: 50% 0 0 50%;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        font-size: 1.4rem;
+
+
         font-weight: bolder;
         color: blue;
 
-        i{
+       i{
+            font-size: 1.4rem;
+            font-family: $mainfont;
             text-align: center;
             height: 45px;
             padding: 0%;
@@ -75,7 +130,7 @@ body{
 }
 
 #sidebar{
-    background-color: aqua;
+    background-color: $svetloplava;
     padding-top: 20%;
 
     #izlaz{
@@ -100,7 +155,13 @@ body{
 
         display: flex;
         justify-content: center;
-        align-items: center;
+        //align-items: center;
+        position: relative;
+
+        i{
+            position: absolute;
+            top:10%;
+        }
 
     }
     #sidebar-label{
@@ -123,6 +184,21 @@ body{
 
 
 /*    HERO SECTION STYLING      */
+#hero{
+    position: relative;
+
+        &::before{
+
+            content: '';
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+    }
+}
 
     .hero{
         height: 160vh;
@@ -132,25 +208,96 @@ body{
         }
 
 
-        background-color: rgb(0, 0, 77);
+        background-image: url(/img/pozadina2.jpg);
+        background-size: cover;
+
+
+
+
 
 
         #hero-container{
             height: 100%;
-            background-color: rgb(46, 56, 27);
+
+            z-index: 10;
+          //  background-color: rgb(46, 56, 27);
 
             .row{
                 width: inherit;
                 height: inherit;
 
                 #tekst{
-                    height: 50%;
+                    height: 40%;
+                    position: relative;
                     @include rsm{
                         height: 100%;
+
                     }
 
                    /* width: 50%;*/
-                    background-color: rgb(54, 7, 54);
+                 //   background-color: rgb(54, 7, 54);
+
+
+                    h1{
+
+                        font-size: size(size-large3);
+                        color: $white;
+                        font-family: $mainfont;
+                        margin-bottom: 1.5rem;
+                        text-align: center;
+
+                        @include rsm{
+                            text-align: start;
+                        }
+
+                        @include rlg{
+                            color: $white;
+                            font-family: $mainfont;
+                            font-size: size(size-ultra-large);
+                            line-height: 3.9rem;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        .plava{
+                            color: $svetloplava;
+                        }
+                    }
+
+                    #hero-tekst{
+                        position: absolute;
+                        top: 30%;
+                        width: 100%;
+                        padding-left: 15px;
+                        padding-right: 10px;
+                        height: 40vh;
+                      //  background-color: black;
+
+
+
+
+                        p{
+
+                            color:$white;
+                            font-size: size(size-regular1);
+                            font-family: $mainfont;
+                            line-height: 2rem;
+
+                            text-align: center;
+
+                            @include rsm{
+                                text-align: start;
+                            }
+
+                            @include rlg{
+                                color: $white;
+                                font-family: $mainfont;
+                                font-size: size(size-regular2);
+                            }
+
+
+                        }
+
+                    }
                 }
             }
 
@@ -164,15 +311,16 @@ body{
 
     #heksagoni{
       /*  width: 50%;*/
-        height: 50%;
+        height: 65%;
         overflow: hidden;
         position: relative;
 
-        background-color: black;
+      //  background-color: black;
 
        @include rsm{
+        //height: 50%;
         position: absolute;
-        height: 100%;
+        height: 115%;
         top: 0;
         left: 50%;
        }
@@ -182,26 +330,22 @@ body{
             position: absolute;
             width: 37vh;
             height: 37vh;
-            top: 30%;
+            top: 30vh;
             left:  -((60vh/100)*5);
-            outline: 1px solid white;
+          //  outline: 1px solid white;
 
             @include rsm{
                 position: absolute;
                 width: 35vh;
                 height: 35vh;
-                top: 30%;
-                left:  -((60vh/100)*5);
-                outline: 1px solid white;
+
             }
 
             @include r850{
                 position: absolute;
                 width: 45vh;
                 height: 45vh;
-                top: 30%;
-                left:  -((60vh/100)*5);
-                outline: 1px solid white;
+
     
             }
 
@@ -210,9 +354,7 @@ body{
                 position: absolute;
                 width: 45vh;
                 height: 45vh;
-                top: 30%;
-                left:  -((60vh/100)*5);
-                outline: 1px solid white;
+
     
             }
 
@@ -220,27 +362,35 @@ body{
                 position: absolute;
                 width: 55vh;
                 height: 55vh;
-                top: 30%;
-                left:  -((60vh/100)*5);
-                outline: 1px solid white;
+
             }
 
 
             #glavni-prvi{
                 width: 100%;
                 height: 100%;
-                background-color: rgb(60, 45, 68);
                 clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+                img{
+                    height: 100%;
+                    clip-path: polygon(0 0, 33% 0, 33% 100%, 0 100%);
+                }
+
             }
 
             #glavni-drugi{
                 width: 100%;
                 height: 100%;
-                background-color: rgb(35, 66, 71);
                 clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
                 position: absolute;
                 bottom: -80%;
                 right: -57%;
+                img{
+                    position: absolute;
+                    left: -100%;
+                    height: 100%;
+                    clip-path: polygon(34% 0, 66% 0, 66% 100%, 34% 100%);
+
+                }
 
                 @include rlg{
                     bottom: -44%;
@@ -251,11 +401,18 @@ body{
             #glavni-treci{
                 width: 100%;
                 height: 100%;
-                background-color: rgb(46, 71, 35);
                 clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
                 position: absolute;
                 top: -80%;
                 right: -57%;
+                img{
+                    position: absolute;
+                    left: -200%;
+                    height: 100%;
+                    clip-path: polygon(67% 0, 100% 0, 100% 100%, 67% 99%);
+
+
+                }
 
                 @include rlg{
                     top: -112%;
@@ -267,7 +424,6 @@ body{
                 position: absolute;
                 width: 55%;
                 height: 55%;
-                background-color: red;
                 clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 
 
@@ -281,25 +437,105 @@ body{
 
                 right: -22.5%;
                 top: -29%;
+
+                img{
+                    height: 100%;
+                    clip-path: polygon(0 0, 33% 0, 33% 100%, 0 100%);
+                }
+                
             }
             #prvi-drugi{
 
                 right: 4%;
                 bottom: -43%;
+               
+
+                img{
+                    position: absolute;
+                    left: -200%;
+                    height: 100%;
+                    clip-path: polygon(67% 0, 100% 0, 100% 100%, 67% 99%);
+
+
+                }
             }
 
             #prvi-treci{
 
                 right: -48%;
                 top: 14%;
+
+                img{
+                    position: absolute;
+                    left: -100%;
+                    height: 100%;
+                    clip-path: polygon(34% 0, 66% 0, 66% 100%, 34% 100%);
+
+                }
             }
 
             #prvi-cetvrti{
 
-                background-color: darkorange;
+                background-color: $svetloplava;
                 right: -15%;
                 top: 52%;
                 z-index: 3;
+  
+                font-weight: bold;
+                //font-size: size(size-regular1);
+
+
+
+                a{
+                    font-family: $mainfont;
+                    display: inline-block;
+                    position: absolute;
+                    right: 8%;
+                    top:25%;
+                    width: 50%;
+                    height:60%;
+                    text-decoration: none;
+                    color: black;
+                    text-align: right;
+                    font-size: 2vh;
+
+                    @include rxxl{
+                        height: 50%;
+                        top: 28%;
+                        font-size: 2.2vh;
+                    }
+
+                    i{
+                       // font-size: 3rem;
+                    }
+                
+
+                    &:hover{
+
+                        #link-tekst-1{
+                            right:0.8rem;
+                        }
+                        #link-tekst-2{
+                            right:1.6rem;
+                        }
+                    }
+
+                    #link-tekst-1{
+                        display: inline-block;
+                        position: absolute;
+                        width: fit-content;
+                        right: 0rem;
+                        transition: 300ms;
+                    }
+                    #link-tekst-2{
+                        display: inline-block;
+                        position: absolute;
+                        width: fit-content;
+                        right: 0rem;
+                        transition: 300ms;
+                    }
+
+                }
             }
 
         }
@@ -310,5 +546,5 @@ body{
 .proba{
     width: 100%;
     height: 1500px;
-    background-color: darkgreen;
+    background-color: black;
 }
