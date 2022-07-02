@@ -42,6 +42,7 @@ body {
   position: relative;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
+  font-size: 1.5rem;
 }
 
 #nav-id #glavni-linkovi a::before {
@@ -233,7 +234,7 @@ body {
   .hero #hero-container .row #tekst h1 {
     color: white;
     font-family: "Nunito";
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 3.9rem;
     margin-bottom: 1.5rem;
   }
@@ -506,9 +507,263 @@ body {
   transition: 300ms;
 }
 
-.proba {
+#destinacije {
   width: 100%;
   height: 1500px;
   background-color: black;
+}
+
+#destinacije #destinacije-naslov {
+  background-color: black;
+  padding-top: 10rem;
+  color: white;
+  font-family: "Nunito";
+}
+
+#destinacije #destinacije-naslov h2 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.4rem;
+}
+
+#destinacije #destinacije-naslov h2 span {
+  color: #99d9ea;
+}
+
+#destinacije #destinacije-naslov p {
+  font-size: 1.2rem;
+  color: #d6d6d6;
+  font-family: "Nunito";
+}
+
+#destinacije .modal-dugme {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+#destinacije .modal-dugme:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#destinacije .modal-dugme:hover {
+  outline-color: #99d9ea;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-offset: 0px;
+}
+
+#destinacije .red {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 0;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  #destinacije .red {
+    display: none;
+  }
+}
+
+#destinacije .slajder-item {
+  height: 240px;
+  width: 160px;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  color: black;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item {
+    height: 360px;
+    width: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item {
+    height: 450px;
+    width: 300px;
+  }
+}
+
+#destinacije .slajder-item img {
+  position: absolute;
+  height: 100%;
+}
+
+#destinacije .slajder-item #destinacija-1 {
+  -webkit-clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);
+          clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);
+  left: 0px;
+}
+
+#destinacije .slajder-item #destinacija-2 {
+  -webkit-clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);
+          clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);
+  left: -160px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-2 {
+    left: -240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-2 {
+    left: -300px;
+  }
+}
+
+#destinacije .slajder-item #destinacija-3 {
+  -webkit-clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);
+          clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);
+  left: -320px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-3 {
+    left: -480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-3 {
+    left: -600px;
+  }
+}
+
+#destinacije .slajder-item #destinacija-4 {
+  -webkit-clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
+          clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
+  left: -480px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-4 {
+    left: -720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-4 {
+    left: -900px;
+  }
+}
+
+#destinacije .slajder-item #destinacija-5 {
+  -webkit-clip-path: polygon(0 0, 17% 0, 17% 100%, 0 100%);
+          clip-path: polygon(0 0, 17% 0, 17% 100%, 0 100%);
+  left: 0px;
+}
+
+#destinacije .slajder-item #destinacija-6 {
+  -webkit-clip-path: polygon(16.5% 0, 34% 0, 34% 100%, 16.5% 100%);
+          clip-path: polygon(16.5% 0, 34% 0, 34% 100%, 16.5% 100%);
+  left: -160px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-6 {
+    left: -240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-6 {
+    left: -300px;
+  }
+}
+
+#destinacije .slajder-item #destinacija-7 {
+  -webkit-clip-path: polygon(33% 0, 51% 0, 51% 100%, 33% 100%);
+          clip-path: polygon(33% 0, 51% 0, 51% 100%, 33% 100%);
+  left: -320px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-7 {
+    left: -480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-7 {
+    left: -600px;
+  }
+}
+
+#destinacije .slajder-item #destinacija-8 {
+  -webkit-clip-path: polygon(50% 0, 68% 0, 68% 100%, 50% 100%);
+          clip-path: polygon(50% 0, 68% 0, 68% 100%, 50% 100%);
+  left: -480px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-8 {
+    left: -720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-8 {
+    left: -900px;
+  }
+}
+
+#destinacije .slajder-item #destinacija-9 {
+  -webkit-clip-path: polygon(66.7% 0, 85% 0, 85% 100%, 66.7% 100%);
+          clip-path: polygon(66.7% 0, 85% 0, 85% 100%, 66.7% 100%);
+  left: -640px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-9 {
+    left: -959px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-9 {
+    left: -1199px;
+  }
+}
+
+#destinacije .slajder-item #destinacija-10 {
+  -webkit-clip-path: polygon(83% 0, 100% 0, 100% 100%, 83% 100%);
+          clip-path: polygon(83% 0, 100% 0, 100% 100%, 83% 100%);
+  left: -800px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-10 {
+    left: -1200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-10 {
+    left: -1500px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
