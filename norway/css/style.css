@@ -537,6 +537,132 @@ body {
   font-family: "Nunito";
 }
 
+#destinacije .modal-sadrzaj-destinacije {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: "Nunito";
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija {
+  width: 100px;
+  height: 150px;
+  border-radius: 3px;
+  margin-top: 0.4rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija img {
+  position: absolute;
+  height: 100%;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-1 {
+  left: 0px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-2 {
+  left: -100px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-3 {
+  left: -200px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-4 {
+  left: -300px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-5 {
+  left: 0px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-6 {
+  left: -100px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-7 {
+  left: -200px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-8 {
+  left: -300px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-9 {
+  left: -400px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-10 {
+  left: -500px;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-zatvori {
+  background-color: #555555;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-zatvori:hover {
+  color: transparent;
+  background-color: #6e6e6e;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-zatvori:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-header {
+  border-bottom: 2px solid #99d9ea;
+  color: white;
+  font-family: "Nunito";
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-footer {
+  border-top: 2px solid #99d9ea;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-prihvati {
+  font-family: "Nunito";
+  background-color: #7cb0be;
+  color: black;
+  border: none;
+  font-weight: bold;
+  -webkit-transition: none;
+  transition: none;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-prihvati:hover {
+  background-color: #99d9ea;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-prihvati:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-ponisti {
+  font-family: "Nunito";
+  color: #cf0000;
+  border: none;
+  font-weight: bold;
+  -webkit-transition: none;
+  transition: none;
+  background-color: #1b0000;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-ponisti:hover {
+  color: white;
+  background-color: #8a0000;
+}
+
+#destinacije .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-ponisti:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #destinacije .modal-dugme {
   position: absolute;
   left: 1px;

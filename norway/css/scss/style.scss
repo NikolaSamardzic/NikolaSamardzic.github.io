@@ -574,6 +574,137 @@ body{
         }
     }
 
+    .modal-sadrzaj-destinacije{
+        background-color: rgb(26, 26, 26);
+        color: white;
+        font-family: $mainfont;
+
+        .modal-slika-destinacija{
+
+            width: 100px;
+            height: 150px;
+            border-radius: 3px;
+
+            margin-top: 0.4rem;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            float: left;
+            overflow: hidden;
+            position: relative;
+            img{
+                position: absolute;
+                height: 100%;
+
+
+            }
+
+
+            #modal-slika-destinacija-1{
+                left: 0px;
+            }
+
+            #modal-slika-destinacija-2{
+                left: -100px;
+            }
+
+            #modal-slika-destinacija-3{
+                left: -200px;
+            }
+
+            #modal-slika-destinacija-4{
+                left: -300px;
+            }
+
+            #modal-slika-destinacija-5{
+                left: 0px;
+            }
+
+            #modal-slika-destinacija-6{
+                left: -100px;
+            }
+
+            #modal-slika-destinacija-7{
+                left: -200px;
+            }
+
+            #modal-slika-destinacija-8{
+                left: -300px;
+            }
+
+            #modal-slika-destinacija-9{
+                left: -400px;
+            }
+
+            #modal-slika-destinacija-10{
+                left: -500px;
+            }
+
+        }
+        .modal-zatvori{
+
+            background-color: rgb(85, 85, 85);
+            &:hover{
+                color: transparent;
+                background-color: rgb(110, 110, 110);
+            }
+
+            &:focus{
+                box-shadow: none;
+            }
+
+        }
+
+        .modal-header{
+            border-bottom: 2px solid $svetloplava;
+
+            color: white;
+            font-family: $mainfont;
+        }
+
+        .modal-footer{
+            border-top: 2px solid $svetloplava;
+
+            .modal-dugme-destinacija-prihvati{
+
+                font-family: $mainfont;
+                background-color: #7cb0be;
+
+                color: black;
+                border: none;
+                font-weight: bold;
+                transition: none;
+                &:hover{
+                    background-color: $svetloplava;
+                }
+
+                &:focus{
+                    box-shadow: none;
+                }
+
+            }
+
+            .modal-dugme-destinacija-ponisti{
+                font-family: $mainfont;
+            
+                color: rgb(207, 0, 0);
+                border: none;
+                font-weight: bold;
+                transition: none;
+                background-color:rgb(27, 0, 0);
+
+                &:hover{
+                    color: white;
+                    background-color: rgb(138, 0, 0);
+                }
+
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+
+        }
+    }
+
     .modal-dugme{
         position: absolute;
         left: 1px;
