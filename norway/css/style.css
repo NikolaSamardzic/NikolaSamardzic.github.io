@@ -1,29 +1,25 @@
 /*font-family: 'Nunito', sans-serif;
-font-family: 'Patrick Hand', cursive;*/
+font-family: 'Mr Dafoe', cursive;*/
 /*--------------   hexagon styling    ----------------------*/
 body {
-  height: 1000px;
-  background-color: #8a8a8a;
+  height: auto;
+  background-color: black;
   position: relative;
 }
 
 #nav-id {
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  border-bottom: solid 2px transparent;
+  background-color: black;
   background-clip: padding-box;
   z-index: 9;
 }
 
 #nav-id #logo-ime {
   font-size: 2.4rem;
-  letter-spacing: 0.1rem;
   color: white;
-  font-family: "Patrick Hand";
-  letter-spacing: 0.2rem;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
+  font-family: "Nunito";
+  font-weight: bold;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
 #nav-id #logo-ime:hover {
@@ -40,8 +36,8 @@ body {
   font-family: "Nunito";
   display: inline-block;
   position: relative;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
   font-size: 1.5rem;
 }
 
@@ -55,8 +51,8 @@ body {
   top: 4.2rem;
   border-radius: 3px;
   opacity: 0.0;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
 #nav-id #glavni-linkovi a:hover::before {
@@ -218,6 +214,7 @@ body {
 
 .hero #hero-container .row #tekst h1 {
   font-size: 2.4rem;
+  font-weight: bold;
   color: white;
   font-family: "Nunito";
   margin-bottom: 1.5rem;
@@ -254,7 +251,7 @@ body {
 }
 
 .hero #hero-container .row #tekst #hero-tekst p {
-  color: white;
+  color: #e4e4e4;
   font-size: 1.2rem;
   font-family: "Nunito";
   line-height: 2rem;
@@ -269,7 +266,7 @@ body {
 
 @media (min-width: 992px) {
   .hero #hero-container .row #tekst #hero-tekst p {
-    color: white;
+    color: #e4e4e4;
     font-family: "Nunito";
     font-size: 1.5rem;
   }
@@ -509,7 +506,7 @@ body {
 
 #destinacije {
   width: 100%;
-  height: 1500px;
+  height: auto;
   background-color: black;
 }
 
@@ -645,12 +642,12 @@ body {
 
 #destinacije .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-ponisti {
   font-family: "Nunito";
-  color: #cf0000;
+  color: white;
   border: none;
   font-weight: bold;
   -webkit-transition: none;
   transition: none;
-  background-color: #1b0000;
+  background-color: #3b0000;
 }
 
 #destinacije .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-ponisti:hover {
@@ -707,13 +704,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2rem;
   color: black;
   overflow: hidden;
 }
@@ -891,5 +881,487 @@ body {
   #destinacije .slajder-item #destinacija-10 {
     left: -1500px;
   }
+}
+
+#destinacije .slajder-item #destinacija-11 {
+  left: -1282px;
+}
+
+@media (min-width: 576px) {
+  #destinacije .slajder-item #destinacija-11 {
+    left: -1923px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #destinacije .slajder-item #destinacija-11 {
+    left: -2400px;
+  }
+}
+
+#gradovi {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+#gradovi #destinacije-naslov {
+  background-color: black;
+  padding-top: 10rem;
+  color: white;
+  font-family: "Nunito";
+}
+
+#gradovi #destinacije-naslov h2 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.4rem;
+}
+
+#gradovi #destinacije-naslov h2 span {
+  color: #99d9ea;
+}
+
+#gradovi #destinacije-naslov p {
+  font-size: 1.2rem;
+  color: #d6d6d6;
+  font-family: "Nunito";
+}
+
+#gradovi .modal-sadrzaj-destinacije {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: "Nunito";
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija {
+  width: 100px;
+  height: 150px;
+  border-radius: 3px;
+  margin-top: 0.4rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija img {
+  position: absolute;
+  height: 100%;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-1 {
+  left: 0px;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-2 {
+  left: -100px;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-3 {
+  left: -200px;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-4 {
+  left: -300px;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-5 {
+  left: -400px;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-6 {
+  left: -500px;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-7 {
+  left: -600px;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-slika-destinacija #modal-slika-destinacija-8 {
+  left: -700px;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-zatvori {
+  background-color: #555555;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-zatvori:hover {
+  color: transparent;
+  background-color: #6e6e6e;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-zatvori:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-header {
+  border-bottom: 2px solid #99d9ea;
+  color: white;
+  font-family: "Nunito";
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-footer {
+  border-top: 2px solid #99d9ea;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-prihvati {
+  font-family: "Nunito";
+  background-color: #7cb0be;
+  color: black;
+  border: none;
+  font-weight: bold;
+  -webkit-transition: none;
+  transition: none;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-prihvati:hover {
+  background-color: #99d9ea;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-prihvati:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-ponisti {
+  font-family: "Nunito";
+  color: white;
+  border: none;
+  font-weight: bold;
+  -webkit-transition: none;
+  transition: none;
+  background-color: #3b0000;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-ponisti:hover {
+  color: white;
+  background-color: #8a0000;
+}
+
+#gradovi .modal-sadrzaj-destinacije .modal-footer .modal-dugme-destinacija-ponisti:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#gradovi .modal-dugme {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+#gradovi .modal-dugme:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#gradovi .modal-dugme:hover {
+  outline-color: #99d9ea;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-offset: 0px;
+}
+
+#gradovi .red {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 0;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  #gradovi .red {
+    display: none;
+  }
+}
+
+#gradovi .slajder-item {
+  height: 240px;
+  width: 160px;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  color: black;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  #gradovi .slajder-item {
+    height: 360px;
+    width: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gradovi .slajder-item {
+    height: 450px;
+    width: 300px;
+  }
+}
+
+#gradovi .slajder-item img {
+  position: absolute;
+  height: 100%;
+}
+
+#gradovi .slajder-item #destinacija-1 {
+  left: 0px;
+}
+
+#gradovi .slajder-item #destinacija-2 {
+  left: -160px;
+}
+
+@media (min-width: 576px) {
+  #gradovi .slajder-item #destinacija-2 {
+    left: -240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gradovi .slajder-item #destinacija-2 {
+    left: -300px;
+  }
+}
+
+#gradovi .slajder-item #destinacija-3 {
+  left: -320px;
+}
+
+@media (min-width: 576px) {
+  #gradovi .slajder-item #destinacija-3 {
+    left: -480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gradovi .slajder-item #destinacija-3 {
+    left: -600px;
+  }
+}
+
+#gradovi .slajder-item #destinacija-4 {
+  left: -480px;
+}
+
+@media (min-width: 576px) {
+  #gradovi .slajder-item #destinacija-4 {
+    left: -720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gradovi .slajder-item #destinacija-4 {
+    left: -900px;
+  }
+}
+
+#gradovi .slajder-item #destinacija-5 {
+  left: -640px;
+}
+
+@media (min-width: 576px) {
+  #gradovi .slajder-item #destinacija-5 {
+    left: -960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gradovi .slajder-item #destinacija-5 {
+    left: -1200px;
+  }
+}
+
+#gradovi .slajder-item #destinacija-6 {
+  left: -801px;
+}
+
+@media (min-width: 576px) {
+  #gradovi .slajder-item #destinacija-6 {
+    left: -1201px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gradovi .slajder-item #destinacija-6 {
+    left: -1501px;
+  }
+}
+
+#gradovi .slajder-item #destinacija-7 {
+  left: -961px;
+}
+
+@media (min-width: 576px) {
+  #gradovi .slajder-item #destinacija-7 {
+    left: -1441px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gradovi .slajder-item #destinacija-7 {
+    left: -1801px;
+  }
+}
+
+#gradovi .slajder-item #destinacija-8 {
+  left: -1121px;
+}
+
+@media (min-width: 576px) {
+  #gradovi .slajder-item #destinacija-8 {
+    left: -1681px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #gradovi .slajder-item #destinacija-8 {
+    left: -2101px;
+  }
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  padding-top: 5rem;
+  font-family: "Nunito";
+}
+
+footer #footer-pozadina {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 50vw;
+  background-image: url(../img/futer-3.jpg);
+}
+
+@media (min-width: 768px) {
+  footer #footer-pozadina {
+    background-image: url(../img/futer-2.jpg);
+    height: 30vw;
+  }
+}
+
+footer #tekst {
+  font-family: "Mr Dafoe";
+  display: inline-block;
+  color: #7cb0be;
+  color: #e4e4e4;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  footer #tekst {
+    font-size: 5rem;
+  }
+}
+
+footer #svg-norveska {
+  height: 120px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  footer #svg-norveska {
+    height: 150px;
+  }
+}
+
+footer #svg-norveska img {
+  height: inherit;
+}
+
+footer #svg-norveska::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  width: 22%;
+  left: 0;
+  border-top: 1px solid #e4e4e4;
+}
+
+@media (min-width: 576px) {
+  footer #svg-norveska::after {
+    width: 27%;
+  }
+}
+
+@media (min-width: 992px) {
+  footer #svg-norveska::after {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer #svg-norveska::after {
+    width: 35%;
+  }
+}
+
+footer #svg-norveska::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  width: 22%;
+  right: 0;
+  border-top: 1px solid #e4e4e4;
+}
+
+@media (min-width: 576px) {
+  footer #svg-norveska::before {
+    width: 27%;
+  }
+}
+
+@media (min-width: 992px) {
+  footer #svg-norveska::before {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer #svg-norveska::before {
+    width: 35%;
+  }
+}
+
+footer #footer-logo {
+  height: 50px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: #e4e4e4;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Nunito";
+}
+
+footer a:hover {
+  color: #99d9ea;
 }
 /*# sourceMappingURL=style.css.map */
