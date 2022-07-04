@@ -149,7 +149,7 @@ body{
         background-color: white;
 
         display: inline-block;
-        position: absolute;
+        //position: absolute;
         top: 65%;
         left: 5px;
 
@@ -1365,4 +1365,250 @@ footer{
         }
     }
 
+}
+
+
+
+#kultura{
+    height: auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+
+    #kultura-hero{
+        background-color: #353535;
+
+
+        height: 100vh;
+
+        @include rmd{
+            height: 100vh;
+        }
+
+        .row{
+            height: inherit;
+        }
+
+    }
+
+    #prva-kolona{
+        position: relative;
+        height: 50vh;
+        border-bottom: 1px solid red;
+     //   background-color: red;
+
+        @include rmd{
+            height: 100vh;
+        }
+    }
+
+    #druga-kolona{
+
+
+        height: 50vh;
+
+        display: flex;
+        justify-content: end;
+
+        @include rmd{
+            height: 100vh;
+        }
+
+        .kolona-slike-2{
+            width: 30vh;
+            height: 100%;
+            //background-color: rgb(51, 51, 22);
+            margin-right: -2.6vh;
+
+
+
+
+            img{
+                height: 100vh;
+            }
+        }
+
+        .kolona-slike{
+            width: 100%;
+           // height: 50%;
+            background-color: brown;
+            margin-left: 2vh;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+
+
+            @include rmd{
+                width: 30vh;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            #d-k-s-3{
+                position: relative;
+                width: 30vh;
+                height: 100vh;
+                background-color: #a47cbe;
+                overflow: hidden;
+                border-radius: 4px;
+
+    
+
+                 img{
+                    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+                    height: 100%;
+                   position: absolute;
+                   left: 0%;
+
+                }
+
+            }
+
+
+
+            #d-k-s-1{
+                position: relative;
+                width: 30vh;
+                height: 60vh;
+                background-color: #7cb0be;
+                overflow: hidden;
+                border-radius: 4px;
+
+                @include rmd{
+                    height: 49vh;  
+                    width: 100%;
+                }
+
+                img{
+                    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+                    height: 200%;
+                   position: absolute;
+                   //left: 0%;
+
+                   @include rmd{
+                    right: 0%;
+                   }
+
+
+
+                }
+
+            }
+
+            #d-k-s-2{
+                position: relative;
+                overflow: hidden;
+                width: 30vh;
+                height: 60vh;
+                background-color: darkgreen;
+                border-radius: 4px;
+
+                @include rmd{
+                    height: 49vh;  
+                    width: 100%;
+                }
+
+                img{
+                    clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 50% 100%);
+                    height: 200%;
+                   position: absolute;
+                   right:0%;
+                   bottom: 0%;
+
+                }
+            }
+        }
+
+    }
+
+    #hero-tekst{
+        h1{
+
+            font-size: size(size-large3);
+            font-weight: bold;
+            color: $white;
+            font-family: $mainfont;
+            margin-bottom: 1.5rem;
+            text-align: center;
+
+            @include rsm{
+                text-align: center;
+            }
+
+            @include rmd{
+                text-align: start;
+            }
+
+            @include rlg{
+                text-align: start;
+                color: $white;
+                font-family: $mainfont;
+                font-size: size(size-ultra-large);
+                line-height: 3.9rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .plava{
+                color: $svetloplava;
+            }
+        }
+    }
+        #hero-tekst{
+            position: absolute;
+            top: 10vh;
+
+            height: 40vh;
+
+            text-align: center;
+
+            padding-left: 0rem;
+            padding-right: 1.5rem;
+
+
+            @include rmd{
+                top: 30vh;
+
+                padding-left: 0rem;
+                padding-right: 0rem;
+            }
+
+
+            p{
+
+                color: rgb(228, 228, 228);
+                font-size: size(size-regular1);
+                font-family: $mainfont;
+                line-height: 2rem;
+                
+                text-align: center;
+
+                @include rsm{
+                    text-align: center;
+                    color: rgb(228, 228, 228);
+                }
+
+                @include rmd{
+                    text-align: start;
+                }
+
+                @include rlg{
+                    text-align: start;
+                    color: rgb(228, 228, 228);
+                    font-family: $mainfont;
+                    font-size: size(size-regular2);
+                }
+
+
+            }
+        }
+}
+
+
+#sledece{
+    width: 100%;
+    height: 1000px;
+    background-color: black;
 }
