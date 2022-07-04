@@ -1372,10 +1372,10 @@ footer{
 #kultura{
     height: auto;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+   // background-color: rgb(0, 0, 0);
 
     #kultura-hero{
-        background-color: #353535;
+      // background-color: #353535;
 
 
         height: 100vh;
@@ -1393,11 +1393,14 @@ footer{
     #prva-kolona{
         position: relative;
         height: 50vh;
-        border-bottom: 1px solid red;
+       // border-bottom: 1px solid red;
+        padding-top: 10vh;
+        margin-bottom: 6vh;
      //   background-color: red;
 
         @include rmd{
             height: 100vh;
+            margin-bottom: 0vh;
         }
     }
 
@@ -1405,7 +1408,7 @@ footer{
 
 
         height: 50vh;
-
+        padding: 0;
         display: flex;
         justify-content: end;
 
@@ -1429,14 +1432,15 @@ footer{
 
         .kolona-slike{
             width: 100%;
+            height: fit-content;
            // height: 50%;
-            background-color: brown;
+           // background-color: brown;
             margin-left: 2vh;
             overflow: hidden;
 
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-evenly;
 
 
 
@@ -1451,7 +1455,7 @@ footer{
                 position: relative;
                 width: 30vh;
                 height: 100vh;
-                background-color: #a47cbe;
+              //  background-color: #a47cbe;
                 overflow: hidden;
                 border-radius: 4px;
 
@@ -1471,11 +1475,12 @@ footer{
 
             #d-k-s-1{
                 position: relative;
-                width: 30vh;
-                height: 60vh;
-                background-color: #7cb0be;
+                width: 20vh;
+                height: 40vh;
+               // background-color: #7cb0be;
                 overflow: hidden;
                 border-radius: 4px;
+
 
                 @include rmd{
                     height: 49vh;  
@@ -1486,7 +1491,7 @@ footer{
                     clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
                     height: 200%;
                    position: absolute;
-                   //left: 0%;
+                   right: 0%;
 
                    @include rmd{
                     right: 0%;
@@ -1501,9 +1506,9 @@ footer{
             #d-k-s-2{
                 position: relative;
                 overflow: hidden;
-                width: 30vh;
-                height: 60vh;
-                background-color: darkgreen;
+                width: 20vh;
+                height: 40vh;
+               // background-color: darkgreen;
                 border-radius: 4px;
 
                 @include rmd{
@@ -1557,20 +1562,19 @@ footer{
         }
     }
         #hero-tekst{
-            position: absolute;
-            top: 10vh;
+
 
             height: 40vh;
 
             text-align: center;
-
+            padding-top: rvh;
             padding-left: 0rem;
             padding-right: 1.5rem;
 
 
             @include rmd{
                 top: 30vh;
-
+                padding-top: 15vh;
                 padding-left: 0rem;
                 padding-right: 0rem;
             }
@@ -1610,5 +1614,5 @@ footer{
 #sledece{
     width: 100%;
     height: 1000px;
-    background-color: black;
+    background-color: rgb(44, 44, 44);
 }
