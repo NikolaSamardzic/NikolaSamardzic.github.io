@@ -179,8 +179,6 @@ body {
 .hero {
   height: 160vh;
   position: relative;
-  background-image: url(../img/pozadina2.jpg);
-  background-size: cover;
 }
 
 @media (min-width: 576px) {
@@ -1714,8 +1712,9 @@ footer a:hover {
 
 #hrana {
   width: 100%;
-  height: 1000px;
-  border-top: 1px solid red;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: black;
 }
 
@@ -1741,6 +1740,168 @@ footer a:hover {
   font-size: 1.2rem;
   color: #d6d6d6;
   font-family: "Nunito";
+}
+
+#hrana #recepti-slike {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#hrana .hrana-slike {
+  height: 600px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+@media (min-width: 768px) {
+  #hrana .hrana-slike {
+    height: 650px;
+    width: 390px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  #hrana .hrana-slike {
+    height: 770px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 250px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+#hrana .hrana-slike .break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 0;
+}
+
+#hrana .hrana-slike .slika {
+  width: 180px;
+  height: 270px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media (min-width: 992px) {
+  #hrana .hrana-slike .slika {
+    width: 250px;
+    height: 375px;
+  }
+}
+
+#hrana .hrana-slike .slika img {
+  position: absolute;
+  height: 100%;
+}
+
+#hrana .hrana-slike .slika #hrana-2 {
+  left: -180px;
+}
+
+@media (min-width: 992px) {
+  #hrana .hrana-slike .slika #hrana-2 {
+    left: -250px;
+  }
+}
+
+#hrana .hrana-slike .slika #hrana-3 {
+  left: -360px;
+}
+
+@media (min-width: 992px) {
+  #hrana .hrana-slike .slika #hrana-3 {
+    left: -500px;
+  }
+}
+
+#hrana .hrana-slike .slika #hrana-4 {
+  left: -540px;
+}
+
+@media (min-width: 992px) {
+  #hrana .hrana-slike .slika #hrana-4 {
+    left: -750px;
+  }
+}
+
+#hrana #recepti {
+  width: 75%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 300px;
+}
+
+@media (min-width: 768px) {
+  #hrana #recepti {
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  #hrana #recepti {
+    width: 400px;
+  }
+}
+
+#hrana #recepti #accordionExample {
+  min-height: 650px;
+}
+
+@media (min-width: 992px) {
+  #hrana #recepti #accordionExample {
+    height: 765px;
+  }
+}
+
+#hrana #recepti #accordionExample .accordion-item {
+  background-color: #161616;
+  color: #e7e7e7;
+}
+
+#hrana #recepti #accordionExample .accordion-item h5 {
+  color: #99d9ea;
+}
+
+#hrana #recepti #accordionExample .accordion-item .accordion-button {
+  background-color: #99d9ea;
+}
+
+#hrana #recepti #accordionExample .accordion-item .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: black;
+}
+
+#hrana #recepti #accordionExample .accordion-item .accordion-button:not(.collapsed) {
+  color: black;
+}
+
+#hrana #recepti #accordionExample .accordion-body {
+  min-height: 435px;
+}
+
+@media (min-width: 992px) {
+  #hrana #recepti #accordionExample .accordion-body {
+    height: 555px;
+  }
 }
 
 #sledece {
