@@ -1806,6 +1806,25 @@ footer a:hover {
   }
 }
 
+#hrana .hrana-slike .slika button {
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  outline: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+  border: none;
+}
+
+#hrana .hrana-slike .slika button:hover {
+  outline: 2px solid #99d9ea;
+  outline-offset: -2px;
+}
+
 #hrana .hrana-slike .slika img {
   position: absolute;
   height: 100%;
