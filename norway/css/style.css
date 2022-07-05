@@ -1609,6 +1609,140 @@ footer a:hover {
   }
 }
 
+#vikinzi {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: black;
+}
+
+#vikinzi #destinacije-naslov {
+  background-color: black;
+  padding-top: 5rem;
+  color: white;
+  font-family: "Nunito";
+}
+
+#vikinzi #destinacije-naslov h2 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.4rem;
+}
+
+#vikinzi #destinacije-naslov h2 span {
+  color: #99d9ea;
+}
+
+#vikinzi #destinacije-naslov p {
+  font-size: 1.2rem;
+  color: #d6d6d6;
+  font-family: "Nunito";
+}
+
+#vikinzi .slajder-item {
+  height: 240px;
+  width: 160px;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  #vikinzi .slajder-item {
+    height: 360px;
+    width: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #vikinzi .slajder-item {
+    height: 450px;
+    width: 300px;
+  }
+}
+
+#vikinzi .slajder-item img {
+  position: absolute;
+  height: 100%;
+}
+
+#vikinzi .slajder-item #viking-1 {
+  position: absolute;
+  left: -160px;
+}
+
+@media (min-width: 576px) {
+  #vikinzi .slajder-item #viking-1 {
+    left: -240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #vikinzi .slajder-item #viking-1 {
+    left: -300px;
+  }
+}
+
+#vikinzi .slajder-item #viking-2 {
+  position: absolute;
+  left: -320px;
+}
+
+@media (min-width: 576px) {
+  #vikinzi .slajder-item #viking-2 {
+    left: -480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #vikinzi .slajder-item #viking-2 {
+    left: -600px;
+  }
+}
+
+#vikinzi .viking-tekst {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#hrana {
+  width: 100%;
+  height: 1000px;
+  border-top: 1px solid red;
+  background-color: black;
+}
+
+#hrana #destinacije-naslov {
+  background-color: black;
+  padding-top: 5rem;
+  color: white;
+  font-family: "Nunito";
+}
+
+#hrana #destinacije-naslov h2 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.4rem;
+}
+
+#hrana #destinacije-naslov h2 span {
+  color: #99d9ea;
+}
+
+#hrana #destinacije-naslov p {
+  font-size: 1.2rem;
+  color: #d6d6d6;
+  font-family: "Nunito";
+}
+
 #sledece {
   width: 100%;
   height: 1000px;
