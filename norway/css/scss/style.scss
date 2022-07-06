@@ -1567,7 +1567,7 @@ footer{
             height: 40vh;
 
             text-align: center;
-            padding-top: rvh;
+           
             padding-left: 0rem;
             padding-right: 1.5rem;
 
@@ -1911,7 +1911,7 @@ footer{
     height: fit-content;
     background-color: black;
   //  border-top: 1px solid red;
-
+    
 
     #destinacije-naslov{
         background-color: rgb(0, 0, 0);
@@ -2239,9 +2239,92 @@ footer{
 
 }
 
+#pozadina{
+    position: absolute;
+    width: 50vh;
+    height: 100vh;
+    background-color: red;
+    right: 0;
+    top: 0;
 
-#sledece{
+    
+}
+
+#booking{
     width: 100%;
+   // background-color: rgb(34, 50, 66);
     height: 1000px;
-    background-color: rgb(44, 44, 44);
+    min-height: 100vh;
+   // position: absolute;
+   // z-index: 1;
+
+    #hero-tekst{
+
+        color: white;
+        span{
+            color: $svetloplava;
+        }
+        //height: 3vh;
+        font-family: $mainfont;
+
+        text-align: start;
+        background-color: black;
+
+        padding-left: 0rem;
+        padding-right: 1.5rem;
+
+        h1{
+            font-size: size(size-ultra-large);
+            font-weight: bold;
+        }
+
+        @include rmd{
+            top: 30vh;
+            padding-top: 15vh;
+            padding-left: 0rem;
+            padding-right: 0rem;
+        }
+
+
+    }
+
+    form{
+       // width: 100%;
+        margin-top: 5rem;
+
+        #broj{
+            color: black;
+            display: inline-block;
+           // border: 1px solid red;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $svetloplava;
+        }
+
+        @include rmd{
+           // width: 400px;
+        }
+
+        input{
+            background-color: #d6d6d6;
+        }
+
+        label{
+            color:white;
+            font-weight: bold;
+            font-family: $mainfont
+        }
+
+        h2{
+            color: white;
+            font-family: $mainfont;
+            font-weight: bold;
+            span{
+                color: $svetloplava;
+            }
+        }
+
+    }
 }
