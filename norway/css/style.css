@@ -31,6 +31,22 @@ body {
   margin-right: 0.3rem;
 }
 
+#nav-id #glavni-linkovi .akt-link {
+  color: #99d9ea;
+}
+
+#nav-id #glavni-linkovi .akt-link::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  background-color: #99d9ea;
+  left: 20%;
+  border-radius: 3px;
+  top: 3.3rem;
+  opacity: 1.0;
+}
+
 #nav-id #glavni-linkovi a {
   color: white;
   font-family: "Nunito";
@@ -181,7 +197,7 @@ body {
   position: relative;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .hero {
     height: 100vh;
   }
@@ -203,7 +219,7 @@ body {
   /* width: 50%;*/
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .hero #hero-container .row #tekst {
     height: 100%;
   }
@@ -218,7 +234,7 @@ body {
   text-align: center;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .hero #hero-container .row #tekst h1 {
     text-align: start;
   }
@@ -255,7 +271,7 @@ body {
   text-align: center;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .hero #hero-container .row #tekst #hero-tekst p {
     text-align: start;
   }
@@ -277,7 +293,7 @@ body {
   position: relative;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   #heksagoni {
     position: absolute;
     height: 115%;
@@ -294,7 +310,7 @@ body {
   left: -3vh;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   #heksagoni #prvi {
     position: absolute;
     width: 35vh;
@@ -509,7 +525,7 @@ body {
 
 #destinacije #destinacije-naslov {
   background-color: black;
-  padding-top: 10rem;
+  padding-top: 5rem;
   color: white;
   font-family: "Nunito";
 }
@@ -2112,145 +2128,189 @@ footer a:hover {
   }
 }
 
-#events .slajder-item {
+#events .slajder-item-1 {
   height: 240px;
   width: 160px;
   border-radius: 5px;
   position: relative;
+  margin-top: 10px;
+  margin-bottom: 1.5rem;
+}
+
+#events .slajder-item-1 .kocka {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 70px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2rem;
-  color: black;
-  overflow: hidden;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-shadow: -4px 3px 5px 0px;
+          box-shadow: -4px 3px 5px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6);
+          box-shadow: rgba(0, 0, 0, 0.6);
+  background-color: #99d9ea;
+  text-align: center;
+}
+
+#events .slajder-item-1 .kocka .broj .broj-2 {
+  font-size: 2.2rem;
+  margin-bottom: -0.6rem;
+}
+
+#events .slajder-item-1 .kocka .broj p {
+  margin: 0;
+  font-weight: bold;
+}
+
+#events .slajder-item-1 .kocka::after {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 0px;
+  width: 12px;
+  height: 12px;
+  background-color: #99d9ea;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  z-index: 0;
+  -webkit-clip-path: polygon(100% 0, 60% 90%, 100% 90%);
+          clip-path: polygon(100% 0, 60% 90%, 100% 90%);
 }
 
 @media (min-width: 576px) {
-  #events .slajder-item {
+  #events .slajder-item-1 {
     height: 360px;
     width: 240px;
   }
 }
 
 @media (min-width: 1200px) {
-  #events .slajder-item {
+  #events .slajder-item-1 {
     height: 450px;
     width: 300px;
   }
 }
 
-#events .slajder-item img {
+#events .slajder-item-1 .slajder-item-2 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#events .slajder-item-1 .slajder-item-2 img {
   position: absolute;
   height: 100%;
 }
 
-#events .slajder-item #destinacija-1 {
+#events .slajder-item-1 #destinacija-1 {
   left: 0px;
 }
 
-#events .slajder-item #destinacija-2 {
+#events .slajder-item-1 #destinacija-2 {
   left: -160px;
 }
 
 @media (min-width: 576px) {
-  #events .slajder-item #destinacija-2 {
+  #events .slajder-item-1 #destinacija-2 {
     left: -240px;
   }
 }
 
 @media (min-width: 1200px) {
-  #events .slajder-item #destinacija-2 {
+  #events .slajder-item-1 #destinacija-2 {
     left: -300px;
   }
 }
 
-#events .slajder-item #destinacija-3 {
+#events .slajder-item-1 #destinacija-3 {
   left: -320px;
 }
 
 @media (min-width: 576px) {
-  #events .slajder-item #destinacija-3 {
+  #events .slajder-item-1 #destinacija-3 {
     left: -480px;
   }
 }
 
 @media (min-width: 1200px) {
-  #events .slajder-item #destinacija-3 {
+  #events .slajder-item-1 #destinacija-3 {
     left: -600px;
   }
 }
 
-#events .slajder-item #destinacija-4 {
+#events .slajder-item-1 #destinacija-4 {
   left: -480px;
 }
 
 @media (min-width: 576px) {
-  #events .slajder-item #destinacija-4 {
+  #events .slajder-item-1 #destinacija-4 {
     left: -720px;
   }
 }
 
 @media (min-width: 1200px) {
-  #events .slajder-item #destinacija-4 {
+  #events .slajder-item-1 #destinacija-4 {
     left: -900px;
   }
 }
 
-#events .slajder-item #destinacija-5 {
+#events .slajder-item-1 #destinacija-5 {
   left: 0px;
 }
 
-#events .slajder-item #destinacija-6 {
+#events .slajder-item-1 #destinacija-6 {
   left: -480px;
 }
 
 @media (min-width: 576px) {
-  #events .slajder-item #destinacija-6 {
+  #events .slajder-item-1 #destinacija-6 {
     left: -720px;
   }
 }
 
 @media (min-width: 1200px) {
-  #events .slajder-item #destinacija-6 {
+  #events .slajder-item-1 #destinacija-6 {
     left: -900px;
   }
 }
 
-#events .slajder-item #destinacija-7 {
+#events .slajder-item-1 #destinacija-7 {
   left: -320px;
 }
 
 @media (min-width: 576px) {
-  #events .slajder-item #destinacija-7 {
+  #events .slajder-item-1 #destinacija-7 {
     left: -480px;
   }
 }
 
 @media (min-width: 1200px) {
-  #events .slajder-item #destinacija-7 {
+  #events .slajder-item-1 #destinacija-7 {
     left: -600px;
   }
 }
 
-#events .slajder-item #destinacija-8 {
+#events .slajder-item-1 #destinacija-8 {
   left: -160px;
 }
 
 @media (min-width: 576px) {
-  #events .slajder-item #destinacija-8 {
+  #events .slajder-item-1 #destinacija-8 {
     left: -240px;
   }
 }
 
 @media (min-width: 1200px) {
-  #events .slajder-item #destinacija-8 {
+  #events .slajder-item-1 #destinacija-8 {
     left: -300px;
   }
 }
@@ -2266,7 +2326,9 @@ footer a:hover {
 
 #booking {
   width: 100%;
-  height: 1000px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   min-height: 100vh;
 }
 
@@ -2305,14 +2367,15 @@ footer a:hover {
   color: black;
   display: inline-block;
   text-align: center;
-  width: 40px;
-  height: 40px;
+  width: 1.2em;
+  height: 1.2em;
   border-radius: 50%;
   background-color: #99d9ea;
 }
 
 #booking form input {
   background-color: #d6d6d6;
+  font-weight: bold;
 }
 
 #booking form label {
@@ -2329,5 +2392,42 @@ footer a:hover {
 
 #booking form h2 span {
   color: #99d9ea;
+}
+
+#booking form #reset {
+  font-weight: bold;
+  color: lightgray;
+  background-color: #300000;
+  border: none;
+}
+
+#booking form #reset:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#booking form #reset:hover {
+  color: white;
+  background-color: #d60000;
+}
+
+#booking form select {
+  background-color: #d6d6d6;
+  font-weight: bold;
+}
+
+#booking form #potvrda {
+  font-weight: bold;
+  background-color: #7cb0be;
+  border: none;
+}
+
+#booking form #potvrda:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#booking form #potvrda:hover {
+  background-color: #99d9ea;
 }
 /*# sourceMappingURL=style.css.map */
